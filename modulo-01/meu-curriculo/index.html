@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu Nome - Currículo</title>
+    <meta name="description" content="Um currículo em HTML semântico para [Seu Nome], Desenvolvedor(a) Full Stack.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <img src="https://via.placeholder.com/150" alt="Foto de Perfil de [Seu Nome]" class="profile-pic">
+        <h1>SEU NOME COMPLETO</h1>
+        <p>Desenvolvedor(a) Full Stack</p>
+        <address>
+            <p><a href="mailto:seu.email@example.com">seu.email@example.com</a></p>
+            <p><a href="tel:+5511999999999">+55 (11) 99999-9999</a></p>
+        </address>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">Sobre Mim</a></li>
+            <li><a href="#skills">Habilidades</a></li>
+            <li><a href="#experience">Experiência</a></li>
+            <li><a href="#education">Educação</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="about">
+            <h2>SOBRE MIM</h2>
+            <p>Olá! Sou [Seu Nome], um(a) entusiasta de HTML e JavaScript.</p>
+            <p>Fluente em diversas linguagens, incluindo JavaScript, Python e Ruby. Adoro usar HTML semântico e boas práticas de código limpo.</p>
+            <blockquote cite="http://example.com/source">
+                <p>"Código é como humor. Quando você tem que explicar, é ruim."</p>
+            </blockquote>
+        </section>
+
+        <section id="skills">
+            <h2>HABILIDADES</h2>
+            <h3>Habilidades Técnicas</h3>
+            <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>AngularJS</li>
+                <li>React</li>
+                <li>Ruby on Rails</li>
+            </ul>
+            <p>Velocidade de digitação: <meter value="85" min="0" max="100">85%</meter></p>
+            <p>Conclusão de projetos: <progress value="90" max="100">90%</progress></p>
+        </section>
+
+        <section id="experience">
+            <h2>EXPERIÊNCIA</h2>
+            <article>
+                <h3>ENGENHEIRO(A) DE SOFTWARE NA TECH INC</h3>
+                <p><time datetime="2018-01">Jan 2018</time> - <time datetime="2023-12">Dez 2023</time></p>
+                <p>Trabalhei com Node.js, Express e MongoDB para construir aplicações escaláveis.</p>
+            </article>
+            <article>
+                <h3>DESENVOLVEDOR(A) FREELANCER</h3>
+                <p>Mantive um site de portfólio usando Next.js e arquitetura Jamstack.</p>
+            </article>
+        </section>
+
+        <section id="education">
+            <h2>EDUCAÇÃO</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Grau</th>
+                        <th>Instituição</th>
+                        <th>Ano</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>B.Sc. Ciência da Computação</td>
+                        <td>Universidade XYZ</td>
+                        <td><time datetime="2017">2017</time></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>Este currículo utiliza diversas tags semânticas e multimídia do HTML5. É também acessível e amigável a ARIA.</p>
+        <p>&copy; 2025 Seu Nome. Todos os direitos reservados.</p>
+        <div class="social-links">
+            <a href="https://github.com/seu-usuario" target="_blank">GitHub</a> |
+            <a href="https://linkedin.com/in/seu-usuario" target="_blank">LinkedIn</a>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solução da Atividade - Aula 04</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; background-color: #f4f4f4; color: #333; }
+        h1 { color: #0056b3; }
+        p { font-size: 1.1em; }
+        strong { color: #d9534f; }
+        code { background-color: #eee; padding: 2px 5px; border-radius: 3px; }
+    </style>
+</head>
+<body>
+    <h1>Solução da Atividade da Aula 04</h1>
+    <p>Abra o console do seu navegador (pressione a tecla <code>F12</code>) para ver o resultado do código JavaScript.</p>
+    <p>Para testar outros resultados, altere os valores das variáveis dentro da tag <strong>&lt;script&gt;</strong> neste arquivo e atualize a página no navegador.</p>
+
+    <script>
+        // --- Solução da Atividade da Aula 04 ---
+
+        // 1. Declaração das variáveis com valores para teste
+        const nome = "Maria Souza";
+        const idade = 21;
+        const possuiHabilitacao = false;
+
+        // Variável do desafio
+        const sabeLerEscrever = true;
+
+        console.log(`--- Verificador de Habilitação para: ${nome} ---`);
+
+        // 2. Lógica e Estruturas Condicionais
+        // O `if` principal verifica a condição para a pessoa que AINDA NÃO PODE tirar a CNH (menor de idade)
+        if (idade < 18) {
+
+            console.log(`${nome}, você ainda não tem idade suficiente para tirar a CNH.`);
+
+        } else {
+
+            // Se a pessoa for maior de idade, entramos neste bloco `else`.
+            // Agora, verificamos as outras condições (desafio incluído).
+
+            if (sabeLerEscrever === true && possuiHabilitacao === false) {
+
+                console.log(`${nome}, você pode iniciar o processo para tirar sua CNH.`);
+
+            } else if (possuiHabilitacao === true) {
+
+                console.log(`${nome}, você já possui CNH.`);
+
+            } else {
+
+                // Este `else` cobre o caso da pessoa ser maior de idade, não ter CNH, mas não saber ler e escrever.
+                console.log(`${nome}, você não pode tirar a CNH, pois não atende ao requisito de saber ler e escrever.`);
+
+            }
+        }
+
+        console.log("--------------------------------------------------");
+    </script>
+</body>
+</html>

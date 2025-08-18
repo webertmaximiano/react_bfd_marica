@@ -27,6 +27,7 @@ Bem-vindo(a) ao Módulo 01! Aqui você dará seus primeiros passos no mundo do d
 
 Aqui você encontra as soluções para as atividades propostas. Use-as para comparar com seu próprio código e aprender com as diferenças.
 
+*   [Solução da Atividade da Aula 01 (Currículo HTML)](meu-curriculo/index.html)
 *   [Solução da Atividade da Aula 03](atividade-aula-03-solucao.html)
 *   [Solução da Atividade da Aula 04](atividade-aula-04-solucao.html)
 *   [Solução da Atividade da Aula 05](atividade-blog/index.html) (A solução da Aula 05 inclui `index.html` e `style.css` dentro da pasta `atividade-blog`)

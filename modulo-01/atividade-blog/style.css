@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: teal;
+}
+
+#cabecalho-principal {
+    background-color: #f0f8ff;
+    padding: 20px;
+}
+
+.post {
+    border: 1px solid #ccc;
+    margin: 15px;
+    padding: 10px;
+}
+
+#cabecalho-principal h1 {
+    text-align: center;
+}
+
+article > h2 {
+    color: #4682B4;
+}
+
+h2 + p {
+    font-style: italic;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solução da Atividade - Aula 03</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; background-color: #f4f4f4; color: #333; }
+        h1 { color: #0056b3; }
+        p { font-size: 1.1em; }
+        code { background-color: #eee; padding: 2px 5px; border-radius: 3px; }
+    </style>
+</head>
+<body>
+    <h1>Solução da Atividade da Aula 03 - Perfil de Usuário</h1>
+    <p>Abra o console do seu navegador (pressione a tecla <code>F12</code>) para ver as variáveis e seus valores.</p>
+
+    <script>
+        // --- Solução da Atividade da Aula 03 ---
+
+        // 1. Declaração das variáveis com valores fictícios
+        const nome = "Maria Joaquina";
+        let idade = 28;
+        const anoDeNascimento = 1996;
+        let cidade = "São Paulo";
+        const profissao = "Engenheira de Software";
+        let email = "maria.joaquina@example.com";
+        let ehEstudante = true;
+
+        // 2. Exibição dos valores no console com descrições
+        console.log("--- Perfil do Usuário ---");
+        console.log("Nome:", nome);
+        console.log("Idade:", idade);
+        console.log("Ano de Nascimento:", anoDeNascimento);
+        console.log("Cidade:", cidade);
+        console.log("Profissão:", profissao);
+        console.log("E-mail:", email);
+        console.log("É estudante?:", ehEstudante);
+        console.log("-------------------------");
+
+        // Exemplo de como uma variável `let` pode ser atualizada
+        console.log("Atualizando perfil...");
+        idade = 29;
+        cidade = "Curitiba";
+        ehEstudante = false;
+
+        console.log("--- Perfil Atualizado ---");
+        console.log("Nova Idade:", idade);
+        console.log("Nova Cidade:", cidade);
+        console.log("É estudante?:", ehEstudante);
+        console.log("-------------------------");
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,363 @@
+/* Estilos básicos para melhorar a apresentação */
+body {
+    font-family: sans-serif;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+p {
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #222; /* Alterado de branco para um cinza bem escuro para melhor contraste */
+    margin-bottom: 15px;
+}
+
+/* 
+  1. Nomes de Cores (Color Names)
+  A forma mais simples. O CSS reconhece mais de 140 nomes de cores (como red, blue, green, coral, tomato, etc.).
+  É fácil de ler, mas oferece uma gama limitada de opções.
+*/
+.cor-nome {
+    background-color: coral;
+}
+
+/*
+  2. Hexadecimal (HEX)
+  O formato mais comum na web. Começa com # e é seguido por 6 caracteres (0-9, a-f).
+  Os dois primeiros representam o Vermelho (R), os dois seguintes o Verde (G) e os dois últimos o Azul (B).
+  Ex: #FF6347 = (FF)vermelho + (63)verde + (47)azul.
+  Se os pares forem iguais (ex: #aabbcc), pode-se usar a forma curta (ex: #abc).
+*/
+.cor-hex {
+    background-color: #FF6347; /* Este é o mesmo tom de 'coral' do exemplo acima */
+}
+
+/*
+  3. RGB (Red, Green, Blue)
+  Similar ao HEX, mas usa valores decimais de 0 a 255 para cada canal de cor (Vermelho, Verde, Azul).
+  Sintaxe: rgb(vermelho, verde, azul).
+*/
+.cor-rgb {
+    background-color: rgb(255, 99, 71); /* Este também é o mesmo tom de 'coral' */
+}
+
+/*
+  4. RGBA (Red, Green, Blue, Alpha)
+  É o RGB com um canal extra: Alpha (transparência). 
+  O valor de Alpha vai de 0.0 (totalmente transparente) a 1.0 (totalmente opaco).
+  Muito útil para criar efeitos de sobreposição.
+*/
+.cor-rgba {
+    background-color: rgba(255, 99, 71, 0.7); /* 'Coral' com 70% de opacidade */
+}
+
+/*
+  5. HSL (Hue, Saturation, Lightness)
+  Um jeito mais intuitivo de pensar em cores.
+  - Hue (Matiz): O grau na roda de cores (0 a 360). 0 é vermelho, 120 é verde, 240 é azul.
+  - Saturation (Saturação): A "pureza" da cor (0% a 100%). 0% é tom de cinza, 100% é a cor total.
+  - Lightness (Luminosidade): O brilho (0% a 100%). 0% é preto, 50% é a cor normal, 100% é branco.
+*/
+.cor-hsl {
+    background-color: hsl(9, 100%, 64%); /* E sim, este também é o mesmo tom de 'coral' */
+}
+
+/*
+  6. HSLA (Hue, Saturation, Lightness, Alpha)
+  É o HSL com o mesmo canal Alpha (transparência) do RGBA.
+  O valor de Alpha também vai de 0.0 a 1.0.
+*/
+.cor-hsla {
+    background-color: hsla(9, 100%, 64%, 0.7); /* 'Coral' com 70% de opacidade */
+}
+
+/* --- SEÇÃO DE ESTILOS DE FONTES --- */
+
+#fontes p {
+    background-color: #4169E1; /* RoyalBlue para os exemplos de fonte */
+}
+
+/* font-family: Define a "letra" do texto. O navegador tenta usar a primeira fonte da lista. Se não encontrar, tenta a próxima, e assim por diante. É uma boa prática terminar com uma família genérica (serif, sans-serif). */
+.font-family-example {
+    font-family: "Times New Roman", Times, serif;
+}
+
+/* font-size: Define o tamanho do texto. Pode ser em pixels (px), em (relativo ao tamanho da fonte do elemento pai), rem (relativo ao tamanho da fonte do elemento raiz - html), etc. */
+.font-size-example {
+    font-size: 22px;
+}
+
+/* font-weight: Define a "grossura" da fonte. Pode ser por palavra-chave (normal, bold) ou por número (100 a 900). Nem toda fonte tem todos os pesos disponíveis. */
+.font-weight-example {
+    font-weight: 900; /* O mais "gordo" possível */
+}
+
+/* font-style: Define se a fonte é normal, itálica (italic) ou oblíqua (oblique). Italic geralmente é um design de fonte separado, enquanto oblique é uma inclinação eletrônica da fonte normal. */
+.font-style-example {
+    font-style: italic;
+}
+
+/* text-decoration: Adiciona linhas ao texto. As mais comuns são underline (sublinhado), line-through (riscado) e overline (linha em cima). */
+.text-decoration-example {
+    text-decoration: line-through;
+}
+
+/* text-transform: Controla o uso de maiúsculas e minúsculas no texto, independentemente de como foi escrito no HTML. */
+.text-transform-example {
+    text-transform: uppercase; /* Deixa todo o texto em MAIÚSCULAS */
+}
+
+/* line-height: Define o espaço entre as linhas. Um valor sem unidade (ex: 1.6) é recomendado, pois é relativo ao font-size do próprio elemento. */
+.line-height-example {
+    line-height: 1.8;
+}
+
+/* letter-spacing: Controla o espaço entre os caracteres. Pode usar valores negativos para juntar as letras. */
+.letter-spacing-example {
+    letter-spacing: 4px;
+}
+
+/* word-spacing: Controla o espaço entre as palavras. */
+.word-spacing-example {
+    word-spacing: 20px;
+}
+
+/* text-align: Alinha o texto horizontalmente dentro do seu contêiner. */
+.text-align-example {
+    text-align: center;
+}
+
+/* font (shorthand): Propriedade "atalho" para definir vários valores de uma vez. A ordem é importante: font-style, font-weight, font-size/line-height, font-family. */
+.font-shorthand-example {
+    font: italic 900 24px/1.5 "Courier New", Courier, monospace;
+    background-color: #e63946; /* Cor diferente para destacar o atalho */
+}
+
+/* --- SEÇÃO DE FONTES DA WEB --- */
+
+#webfonts h2, #webfonts p {
+    background-color: #2a9d8f;
+}
+
+/* 
+  Usando a fonte importada "Lobster".
+  Uma vez que a fonte é importada no <head> do HTML, podemos simplesmente chamá-la pelo nome.
+  É uma boa prática fornecer uma fonte de fallback (ex: cursive) caso o Google Fonts falhe.
+*/
+.font-web-title {
+    font-family: 'Lobster', cursive;
+    font-size: 36px;
+    text-align: center;
+}
+
+/* 
+  Usando a fonte importada "Lato".
+  O mesmo princípio se aplica. Chamamos a fonte pelo nome.
+  O fallback aqui é a família genérica sans-serif, que é a mais parecida com a Lato.
+*/
+.font-web-body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400; /* A fonte Lato foi importada com os pesos 400 (normal) e 700 (bold) */
+    font-size: 18px;
+}
+
+/* --- SEÇÃO DE MARGINS --- */
+
+/* Estilo para a caixa que contém os exemplos, para que as margens sejam visíveis. */
+.margin-container {
+    border: 2px dashed #e63946;
+    background-color: #f1faee;
+    padding: 10px;
+}
+
+/* Define uma cor de fundo para os parágrafos dentro da caixa de margens. */
+.margin-container p {
+    background-color: #a8dadc;
+    /* Resetamos a margem padrão do parágrafo para não interferir com nossos exemplos */
+    margin: 0;
+}
+
+/* Adiciona uma margem de 10px APENAS NO TOPO do elemento. */
+.margin-top-example {
+    margin-top: 10px;
+}
+
+/* Adiciona uma margem de 20px APENAS NA DIREITA do elemento. */
+.margin-right-example {
+    margin-right: 20px;
+}
+
+/* Adiciona uma margem de 30px APENAS EMBAIXO do elemento. */
+.margin-bottom-example {
+    margin-bottom: 30px;
+}
+
+/* Adiciona uma margem de 40px APENAS NA ESQUERDA do elemento. */
+.margin-left-example {
+    margin-left: 40px;
+}
+
+/* 
+  Propriedade "atalho" (shorthand) para as margens.
+  A ordem dos valores segue o sentido horário, como um relógio:
+  margin: CIMA DIREITA BAIXO ESQUERDA;
+*/
+.margin-shorthand-example {
+    margin: 10px 20px 30px 40px;
+}
+
+/* --- SEÇÃO DE PADDING --- */
+
+/* Estilo base para os parágrafos de exemplo de padding. */
+#padding p {
+    background-color: #1d3557;
+    border: 3px dotted #fca311;
+    color: black;
+    /* Resetamos o padding padrão para não interferir com os exemplos */
+    padding: 0;
+}
+
+/* Adiciona um preenchimento de 10px APENAS NO TOPO, entre o conteúdo e a borda. */
+.padding-top-example {
+    padding-top: 10px;
+}
+
+/* Adiciona um preenchimento de 20px APENAS NA DIREITA. */
+.padding-right-example {
+    padding-right: 20px;
+}
+
+/* Adiciona um preenchimento de 30px APENAS EMBAIXO. */
+.padding-bottom-example {
+    padding-bottom: 30px;
+}
+
+/* Adiciona um preenchimento de 40px APENAS NA ESQUERDA. */
+.padding-left-example {
+    padding-left: 40px;
+}
+
+/* 
+  Propriedade "atalho" (shorthand) para o padding.
+  A ordem dos valores é a mesma do margin (sentido horário):
+  padding: CIMA DIREITA BAIXO ESQUERDA;
+*/
+.padding-shorthand-example {
+    padding: 10px 20px 30px 40px;
+}
+
+/* --- SEÇÃO DE BORDERS --- */
+
+#borders p {
+    background-color: #e0e1dd;
+    /* Para os exemplos de borda, precisamos de uma borda base para modificar */
+    border: 2px solid #778da9;
+}
+
+/* border-width: Define a espessura de TODAS as bordas. */
+.border-width-example {
+    border-width: 10px;
+}
+
+/* border-style: Define o estilo da linha. Outros valores incluem: dotted, dashed, double, groove, ridge, inset, outset. */
+.border-style-example {
+    border-style: dashed;
+}
+
+/* border-color: Define a cor de TODAS as bordas. */
+.border-color-example {
+    border-color: #b5179e;
+}
+
+/* Propriedades de lado único: Você pode controlar cada lado individualmente. Aqui, estamos sobrescrevendo apenas a borda esquerda. */
+.border-side-example {
+    border-left: 8px solid #f72585;
+}
+
+/* border-radius: Arredonda os cantos do elemento. Um valor alto pode transformar um quadrado em um círculo. */
+.border-radius-example {
+    border-radius: 25px;
+}
+
+/* 
+  border (shorthand): A forma abreviada mais comum.
+  Define a ESPESSURA, o ESTILO e a COR, nessa ordem.
+*/
+.border-shorthand-example {
+    border: 5px double #4cc9f0;
+}
+
+/* --- SEÇÃO DO CARD --- */
+
+/* 
+  Esta é a classe principal do nosso componente card.
+  Vamos combinar várias propriedades para criar o visual.
+*/
+.card {
+    /* Cor de fundo: um branco suave, não totalmente branco. */
+    background-color: #fdfdfd;
+
+    /* Borda: uma borda sutil, cinza clara, com cantos arredondados. */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+
+    /* Espaçamento Externo (margin): para o card não colar em outros elementos. */
+    margin: 20px auto; /* 20px em cima/baixo, e 'auto' nas laterais para centralizar */
+
+    /* Espaçamento Interno (padding): para o conteúdo não colar nas bordas do card. */
+    padding: 25px;
+
+    /* Fonte: Usando a fonte 'Lato' que importamos para o corpo do texto. */
+    font-family: 'Lato', sans-serif;
+
+    /* Sombra: adiciona um efeito de profundidade, fazendo o card "flutuar". */
+    /* box-shadow: [deslocamento-x] [deslocamento-y] [borrão] [cor-da-sombra] */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+
+    /* Largura máxima para o card não ficar muito largo em telas grandes. */
+    max-width: 500px;
+}
+
+/* Estilizando o título DENTRO do card. */
+.card h3 {
+    /* Fonte: Usando a fonte "Lobster" que importamos para o título. */
+    font-family: 'Lobster', cursive;
+    font-size: 32px;
+    color: #e63946;
+    margin-top: 0; /* Remove a margem de cima padrão do h3 */
+}
+
+/* Estilizando o parágrafo DENTRO do card. */
+.card p {
+    /* Resetamos o estilo base de parágrafo que definimos lá em cima. */
+    background-color: transparent;
+    color: #333;
+    font-weight: 400;
+    line-height: 1.6;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.container {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #778da9;
+    color: #ddd;
+}
+
+.container h1 {
+    background-color: #778da9;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+}
+
+.container img {
+    width: 150;
+    border-radius: 50%;
+    border: 3px solid blue;
+    margin: auto;
+    margin-left: 2rem;
+    align-content: center;
+}

@@ -1,0 +1,116 @@
+<!-- O DOCTYPE define a versão do HTML que está sendo usada, neste caso, HTML5. -->
+<!DOCTYPE html>
+<!-- A tag <html> é a raiz de todo o documento HTML. O atributo "lang" define o idioma da página. -->
+<html lang="pt-BR">
+<!-- A tag <head> contém metadados sobre o documento, como o título, links para folhas de estilo e scripts. -->
+<head>
+    <!-- A tag <meta charset="UTF-8"> define o conjunto de caracteres que a página usará. UTF-8 é amplamente utilizado e suporta a maioria dos caracteres. -->
+    <meta charset="UTF-8">
+    <!-- A tag <meta name="viewport"> controla como a página é exibida em dispositivos móveis. "width=device-width" faz com que a largura da página se ajuste à largura da tela do dispositivo, e "initial-scale=1.0" define o nível de zoom inicial. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- A tag <title> define o título da página, que é exibido na aba do navegador. -->
+    <title>Site Institucional - Aula 06 React </title>
+    <!-- A tag <link> é usada para vincular a folha de estilos (CSS) ao documento HTML. -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        p {
+            color: blue 
+        }
+    </style>
+</head>
+<!-- A tag <body> contém todo o conteúdo visível da página. -->
+<body>
+    <!-- A tag <header> representa o cabeçalho da página, geralmente contendo o logotipo e o menu de navegação. -->
+    <header>
+        <!-- A tag <div> é um contêiner genérico para agrupar elementos. Aqui, ela agrupa o logotipo. -->
+        <div class="logo">
+            <!-- A tag <h1> define um cabeçalho de nível 1, geralmente usado para o título principal da página. -->
+            <h1>Nome da Empresa</h1>
+        </div>
+        <!-- A tag <nav> representa o menu de navegação do site. -->
+        <nav>
+            <!-- A tag <ul> cria uma lista não ordenada. -->
+            <ul>
+                <!-- A tag <li> representa um item da lista. -->
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sobre">Sobre Nós</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- A tag <main> representa o conteúdo principal e único da página. -->
+    <main>
+        <!-- A tag <section> agrupa conteúdo relacionado. O atributo "id" é um identificador único para a seção. -->
+        <section id="home">
+            <!-- A tag <h2> define um cabeçalho de nível 2. -->
+            <h2>Bem-vindo à nossa empresa</h2>
+            <!-- A tag <p> representa um parágrafo de texto. -->
+            <p>Aqui você encontrará as melhores soluções para o seu negócio.</p>
+        </section>
+
+        <section id="sobre">
+            <h2>Sobre Nós</h2>
+            <p>Somos uma empresa com anos de experiência no mercado, focada em resultados.</p>
+            <div>
+                <p>Este parágrafo está DENTRO da div.</p>
+            </div>
+            <p>Este parágrafo está FORA da div, mas é filho direto da section.</p>
+            <p>Este é outro parágrafo filho direto da section.</p>
+        </section>
+
+        <section id="servicos">
+            <h2>Nossos Serviços</h2>
+            <ul>
+                <li class="servico-item">Serviço 1</li>
+                <li class="servico-item">Serviço 2</li>
+                <li class="servico-item">Serviço 3</li>
+            </ul>
+        </section>
+
+        <section id="contato">
+            <h2>Entre em Contato</h2>
+            <!-- A tag <form> é usada para criar um formulário HTML para entrada do usuário. -->
+            <form>
+                <!-- A tag <label> define um rótulo para um elemento de formulário. -->
+                <label for="nome">Nome:</label>
+                <!-- A tag <input> define um campo de entrada de dados. O atributo "type" especifica o tipo de entrada. -->
+                <input type="text" id="nome" name="nome">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                <label for="mensagem">Mensagem:</label>
+                <!-- A tag <textarea> define uma área de texto para entrada de várias linhas. -->
+                <textarea id="mensagem" name="mensagem"></textarea>
+                <!-- A tag <button> define um botão clicável. -->
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <!-- Nova Seção: Hierarquia e Cascata do CSS -->
+        <section id="hierarquia-css">
+            <h2>Hierarquia e Cascata do CSS</h2>
+            <p>Esta seção demonstra como o navegador decide qual estilo aplicar quando há regras conflitantes.</p>
+            
+            <div id="exemplo-cascata" class="caixa-exemplo">
+                <p class="texto-exemplo" style="border: 5px solid green;">
+                    Este parágrafo é o nosso campo de batalha. Observe no CSS as regras que se aplicam a ele e veja qual delas tem a maior prioridade (especificidade).
+                </p>
+            </div>
+
+            <hr>
+            <h4>Exemplo 2: A Ordem da Cascata</h4>
+            <p>Abaixo, temos um parágrafo que é alvo de duas regras com a MESMA especificidade. A cascata determina que a regra escrita por último no CSS será a vencedora.</p>
+            <p id="exemplo-ordem">Este parágrafo terá o fundo ciano, e não amarelo, pois a regra para a cor ciano vem depois no arquivo de estilo.</p>
+
+        </section>
+
+    </main>
+
+    <!-- A tag <footer> representa o rodapé da página, geralmente contendo informações de direitos autorais e links úteis. -->
+    <footer>
+        <p>&copy; 2025 Nome da Empresa. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

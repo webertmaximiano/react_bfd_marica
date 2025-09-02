@@ -1,0 +1,173 @@
+/* O seletor 'body' aplica estilos a todo o corpo do documento. */
+body {
+    /* Define a família da fonte para todo o site. 'sans-serif' é uma escolha segura e legível. */
+    font-family: sans-serif;
+    /* Define a altura da linha, melhorando a legibilidade do texto. */
+    line-height: 1.6;
+    /* Remove as margens padrão do navegador. */
+    margin: 0;
+    /* Remove o preenchimento padrão do navegador. */
+    padding: 0;
+    /* Define uma cor de fundo cinza claro para a página. */
+    background: #f4f4f4;
+    /* Define a cor do texto principal. */
+    color: #333;
+}
+
+/* O seletor 'header' estiliza o cabeçalho da página. */
+header {
+    /* Define a cor de fundo do cabeçalho. */
+    background: #333;
+    /* Define a cor do texto no cabeçalho. */
+    color: #fff;
+    /* Adiciona preenchimento interno ao cabeçalho. */
+    padding: 1rem 0;
+    /* Centraliza o texto no cabeçalho. */
+    text-align: center;
+}
+
+/* Estiliza o h1 dentro do header. */
+header h1 {
+    /* Remove a margem padrão do h1. */
+    margin: 0;
+}
+
+/* Estiliza a lista não ordenada dentro da navegação. */
+nav ul {
+    /* Remove o preenchimento padrão da lista. */
+    padding: 0;
+    /* Remove os marcadores da lista (bolinhas). */
+    list-style: none;
+}
+
+/* Estiliza os itens da lista de navegação. */
+nav ul li {
+    /* Exibe os itens da lista em linha, em vez de um abaixo do outro. */
+    display: inline;
+    /* Adiciona um espaçamento à direita de cada item do menu. */
+    margin-right: 20px;
+}
+
+/* Estiliza os links de navegação. */
+nav a {
+    /* Define a cor do texto dos links. */
+    color: #fff;
+    /* Remove o sublinhado dos links. */
+    text-decoration: none;
+}
+
+/* Estiliza o conteúdo principal da página. */
+main {
+    /* Adiciona preenchimento interno ao conteúdo principal. */
+    padding: 20px;
+}
+
+/* Estiliza as seções dentro do conteúdo principal. */
+section {
+    /* Adiciona uma margem na parte inferior de cada seção. */
+    margin-bottom: 20px;
+    /* Adiciona preenchimento interno às seções. */
+    padding: 20px;
+    /* Define uma cor de fundo branca para as seções. */
+    background: #fff;
+    /* Adiciona uma borda sutil às seções. */
+    border: 1px solid #ddd;
+}
+
+/* Estiliza o rodapé da página. */
+footer {
+    /* Centraliza o texto no rodapé. */
+    text-align: center;
+    /* Adiciona preenchimento interno ao rodapé. */
+    padding: 20px;
+    /* Define a cor de fundo do rodapé. */
+    background: #333;
+    /* Define a cor do texto no rodapé. */
+    color: #fff;
+}
+
+
+/* Estilizando a classe 'logo' */
+.logo {
+    border: 2px solid red; /* Adiciona uma borda vermelha para vermos o efeito */
+}
+
+/* Estilizando o id 'home' */
+#home {
+    background-color: lightblue; /* Muda a cor de fundo para azul claro */
+}
+
+/* Estilizando a classe 'servico-item' */
+.servico-item {
+    background-color: #f9f9f9; /* Um fundo levemente cinza */
+    border: 1px solid #ccc; /* Borda cinza de 1 pixel */
+    border-left: 5px solid #333; /* Borda esquerda mais espessa e escura para destaque */
+    padding: 15px; /* Espaçamento interno */
+    margin-bottom: 10px; /* Espaçamento entre os itens */
+    list-style: none; /* Remove o marcador da lista */
+}
+
+/* --- EXEMPLOS DE SELETORES COMBINADORES --- */
+
+/* Seletor de Descendente (espaço) */
+/* Seleciona todo <p> que está dentro de uma <div> que está dentro da <section id="sobre"> */
+#sobre div p {
+    color: green; /* Muda a cor do texto para verde */
+    font-weight: bold; /* Deixa o texto em negrito */
+}
+
+/* Seletor de Filho Direto (>) */
+/* Seleciona todo <p> que é FILHO DIRETO da <section id="sobre"> */
+#sobre > p {
+    color: purple; /* Muda a cor do texto para roxo */
+}
+
+/* Seletor de Irmão Adjacente (+) */
+/* Seleciona o <p> que vem IMEDIATAMENTE DEPOIS do <h2> */
+#sobre h2 + p {
+    border-top: 2px solid orange; /* Adiciona uma borda laranja no topo */
+}
+
+/* Seletor de Irmão Geral (~) */
+/* Seleciona TODOS os <p> que são irmãos da <div> e que vêm DEPOIS dela */
+#sobre div ~ p {
+    text-decoration: underline; /* Adiciona um sublinhado */
+}
+
+/* --- EXEMPLO DE HIERARQUIA E CASCATA --- */
+
+/* 
+  A hierarquia da força dos seletores (Especificidade) é:
+  1. Seletor de Elemento (p) - MENOS FORTE
+  2. Seletor de Classe (.texto-exemplo)
+  3. Seletor de ID (#exemplo-cascata)
+  4. Estilo Inline (style="...") - MAIS FORTE
+  Fora isso, temos o !important, que quebra todas as regras.
+*/
+
+/* REGRA 1: Seletor de Elemento (Especificidade: 1) */
+#hierarquia-css p {
+    color: black; /* Tentativa 1: Cor preta */
+}
+
+/* REGRA 2: Seletor de Classe (Especificidade: 10) - VENCE A REGRA 1 */
+.texto-exemplo {
+    color: blue; /* Tentativa 2: Cor azul */
+}
+
+/* REGRA 3: Seletor de ID (Especificidade: 100) - VENCE A REGRA 2 */
+#exemplo-cascata p {
+    color: red; /* Tentativa 3: Cor vermelha */
+}
+
+/* REGRA 4: Seletor Combinado (Especificidade: 100 + 10 = 110) - VENCE A REGRA 3 */
+#exemplo-cascata .texto-exemplo {
+    color: orange; /* Tentativa 4: Cor laranja */
+}
+
+/* A "BOMBA ATÔMICA": !important - VENCE TODAS AS REGRAS DE COR */
+#exemplo-cascata p {
+    color: purple !important; /* Tentativa FINAL: Cor roxa */
+}
+
+/* E O ESTILO INLINE? Ele tem especificidade 1000 e vence qualquer regra de BORDA que não tenha !important */

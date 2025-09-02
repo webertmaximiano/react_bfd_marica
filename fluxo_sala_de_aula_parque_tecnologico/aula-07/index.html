@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS: Cores e Fontes</title>
+
+    <!-- 
+      IMPORTAÇÃO DE FONTES DA WEB (Google Fonts)
+      A maneira mais comum de importar fontes é usando a tag <link> no <head> do seu HTML.
+      Abaixo, estamos importando duas fontes: "Lobster" e "Lato".
+      O Google Fonts nos fornece este link exato para que possamos usar as fontes em nosso CSS.
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lobster&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section id="cores">
+        <h1>Diferentes Formas de Definir Cores no CSS</h1>
+        <p class="cor-nome">1. Nome da Cor (Color Name)</p>
+        <p class="cor-hex">2. Hexadecimal</p>
+        <p class="cor-rgb">3. RGB (Red, Green, Blue)</p>
+        <p class="cor-rgba">4. RGBA (Red, Green, Blue, Alpha)</p>
+        <p class="cor-hsl">5. HSL (Hue, Saturation, Lightness)</p>
+        <p class="cor-hsla">6. HSLA (Hue, Saturation, Lightness, Alpha)</p>
+    </section>
+
+    <hr>
+
+    <section id="fontes">
+        <h1>Propriedades de Fontes no CSS</h1>
+        
+        <p class="font-family-example"><b>font-family:</b> Define a família da fonte (ex: serif, sans-serif).</p>
+        
+        <p class="font-size-example"><b>font-size:</b> Altera o tamanho do texto (ex: 16px, 1.2em).</p>
+        
+        <p class="font-weight-example"><b>font-weight:</b> Define o "peso" ou a "grossura" da fonte (ex: normal, bold).</p>
+        
+        <p class="font-style-example"><b>font-style:</b> Define o estilo da fonte (ex: italic).</p>
+        
+        <p class="text-decoration-example"><b>text-decoration:</b> Adiciona linhas decorativas (ex: underline, line-through).</p>
+        
+        <p class="text-transform-example"><b>text-transform:</b> Muda o case do texto (ex: uppercase, capitalize).</p>
+        
+        <p class="line-height-example"><b>line-height:</b> Define a altura da linha, controlando o espaçamento entre as linhas de um parágrafo. Isso melhora a legibilidade.</p>
+        
+        <p class="letter-spacing-example"><b>letter-spacing:</b> Aumenta ou diminui o espaço entre as letras.</p>
+        
+        <p class="word-spacing-example"><b>word-spacing:</b> Aumenta ou diminui o espaço entre as palavras.</p>
+
+        <p class="text-align-example"><b>text-align:</b> Alinha o texto horizontalmente (left, center, right, justify).</p>
+
+        <p class="font-shorthand-example"><b>font (shorthand):</b> Uma propriedade "atalho" para definir vários valores de fonte de uma só vez.</p>
+
+    </section>
+
+    <hr>
+
+    <section id="webfonts">
+        <h1>Importando Fontes da Web</h1>
+        
+        <h2 class="font-web-title">Este título usa a fonte "Lobster"</h2>
+        
+        <p class="font-web-body">Este parágrafo, por sua vez, usa a fonte "Lato" para o corpo do texto. Usar uma fonte limpa e legível como a Lato é uma ótima prática para textos mais longos, enquanto fontes decorativas como a Lobster funcionam bem para títulos e destaques.</p>
+
+        <p class="font-web-body">Depois de importar a fonte no &lt;head&gt; do HTML, basta declarar o nome da fonte na propriedade <code>font-family</code> no seu arquivo CSS, como mostram os exemplos.</p>
+    </section>
+
+    <hr>
+
+    <section id="margins">
+        <h1>Propriedades de Margin</h1>
+        <p>A propriedade <code>margin</code> é usada para criar espaço AO REDOR dos elementos, fora de qualquer borda definida, parte externa.</p>
+
+        <div class="margin-container">
+            <p class="margin-top-example">Eu tenho uma margem de 10px no topo (<code>margin-top</code>).</p>
+            <p class="margin-right-example">Eu tenho uma margem de 20px na direita (<code>margin-right</code>).</p>
+            <p class="margin-bottom-example">Eu tenho uma margem de 30px embaixo (<code>margin-bottom</code>).</p>
+            <p class="margin-left-example">Eu tenho uma margem de 40px na esquerda (<code>margin-left</code>).</p>
+            <p class="margin-shorthand-example">Eu uso a propriedade "atalho" (shorthand) para definir todas as margens de uma vez: 10px 20px 30px 40px.</p>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="padding">
+        <h1>Propriedades de Padding</h1>
+        <p>A propriedade <code>padding</code> é usada para criar espaço INTERNO em um elemento, entre o conteúdo e a sua borda.</p>
+
+        <p class="padding-top-example">Eu tenho um preenchimento de 10px no topo (<code>padding-top</code>).</p>
+        <p class="padding-right-example">Eu tenho um preenchimento de 20px na direita (<code>padding-right</code>).</p>
+        <p class="padding-bottom-example">Eu tenho um preenchimento de 30px embaixo (<code>padding-bottom</code>).</p>
+        <p class="padding-left-example">Eu tenho um preenchimento de 40px na esquerda (<code>padding-left</code>).</p>
+        <p class="padding-shorthand-example">Eu uso a propriedade "atalho" (shorthand) para definir todos os preenchimentos de uma vez: 10px 20px 30px 40px.</p>
+    </section>
+
+    <hr>
+
+    <section id="borders">
+        <h1>Propriedades de Border</h1>
+        <p>A propriedade <code>border</code> é usada para criar uma linha ao redor de um elemento, entre o <code>padding</code> e a <code>margin</code>.</p>
+
+        <p class="border-width-example"><b>border-width:</b> Define a espessura da borda.</p>
+        <p class="border-style-example"><b>border-style:</b> Define o estilo da linha (solid, dotted, dashed, etc.).</p>
+        <p class="border-color-example"><b>border-color:</b> Define a cor da borda.</p>
+        <p class="border-side-example">Podemos aplicar propriedades a apenas um lado, como em <b>border-left</b>.</p>
+        <p class="border-radius-example"><b>border-radius:</b> Arredonda os cantos da borda.</p>
+        <p class="border-shorthand-example"><b>border (shorthand):</b> A forma abreviada para configurar espessura, estilo e cor de uma só vez.</p>
+    </section>
+
+    <hr>
+
+    <section id="card-example">
+        <h1>Exemplo Prático: Criando um Card</h1>
+        <p>Vamos usar várias das propriedades que aprendemos para criar um componente "Card" completo e estilizado.</p>
+
+        <div class="card">
+            <h3>Título do Card</h3>
+            <p>Este é o corpo do nosso card. Aqui, aplicamos espaçamento interno (padding), uma borda arredondada (border-radius), uma fonte customizada (font-family) e uma sombra para dar profundidade.</p>
+        </div>
+    </section>
+
+</body>
+</html>

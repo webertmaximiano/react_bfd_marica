@@ -1,11 +1,224 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula-08</title>
+    <title>Aula 08 - Git e GitHub</title>
+    <style>
+        body {
+            /* Usando uma pilha de fontes mais moderna e legível */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f9fa; /* Fundo geral um pouco mais suave */
+            color: #212529; /* Cor de texto principal mais escura para maior contraste */
+        }
+        header, section {
+            background-color: #ffffff; /* Fundo branco puro para seções */
+            margin-bottom: 25px; /* Aumentando o espaço entre as seções */
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid #dee2e6; /* Borda mais suave */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Sombra sutil para profundidade */
+        }
+        h1 {
+            color: #0056b3; /* Azul escuro para o título principal */
+        }
+        h2 {
+            color: #0056b3; /* Azul escuro para os títulos de seção */
+            border-bottom: 2px solid #dee2e6; /* Linha separadora para clareza */
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h3 {
+            color: #343a40; /* Cinza escuro para subtítulos */
+        }
+        /* Estilo para código inline (fundo claro) */
+        code {
+            background-color: #e9ecef; /* Fundo cinza claro */
+            color: #c7254e; /* Cor rosa/vermelho escuro para o texto, garantindo contraste */
+            padding: 3px 6px;
+            border-radius: 4px;
+            font-family: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        }
+        /* Estilo para bloco de código (fundo escuro) */
+        pre {
+            background-color: #212529; /* Fundo preto/cinza bem escuro */
+            color: #f8f9fa; /* Texto quase branco */
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        /* O `code` dentro de `pre` não deve ter o estilo de código inline */
+        pre code {
+            background-color: transparent;
+            color: inherit; /* Herda a cor do elemento <pre> */
+            padding: 0;
+            border-radius: 0;
+        }
+        .command {
+            color: #20c997; /* Verde água brilhante para comandos */
+        }
+    </style>
 </head>
 <body>
-    
+
+    <header>
+        <h1>Aula 08: Introdução ao Git e GitHub</h1>
+        <p>Nesta aula, vamos aprender os conceitos básicos e os principais comandos do Git, o sistema de controle de versão mais popular do mundo, e do GitHub, a maior plataforma de hospedagem de código.</p>
+    </header>
+
+    <section id="o-que-e-git">
+        <h2>O que é Git?</h2>
+        <p><strong>Git</strong> é um sistema de controle de versão distribuído. Mas o que isso significa?</p>
+        <ul>
+            <li><strong>Controle de Versão:</strong> Ele registra todas as alterações feitas em um arquivo ou conjunto de arquivos ao longo do tempo. Isso permite que você reverta para versões anteriores, compare mudanças e entenda a evolução do seu projeto. É como um "histórico de salvamentos" superpoderoso.</li>
+            <li><strong>Distribuído:</strong> Diferente de sistemas centralizados, cada desenvolvedor tem uma cópia completa do histórico do projeto em sua máquina local. Isso torna o trabalho mais rápido e flexível.</li>
+        </ul>
+    </section>
+
+    <section id="configuracao">
+        <h2>1. Configuração Inicial (Feita apenas uma vez)</h2>
+        <p>Antes de começar a usar o Git, você precisa configurar seu nome de usuário e e-mail. Isso é importante porque cada "commit" (salvamento) que você fizer usará essa informação.</p>
+        <pre><code class="command">git config --global user.name "Seu Nome"
+git config --global user.email "seu.email@exemplo.com"</code></pre>
+        <p>O comando <code>--global</code> faz com que essa configuração seja aplicada a todos os seus projetos Git no seu computador.</p>
+    </section>
+
+    <section id="comandos-basicos">
+        <h2>2. Comandos Essenciais do Dia a Dia</h2>
+        <p>Estes são os comandos que você usará constantemente.</p>
+
+        <h3><code>git init</code></h3>
+        <p>Para começar a usar o Git em um projeto que ainda não está sob controle de versão, você precisa "inicializar" um repositório. Navegue até a pasta do seu projeto pelo terminal e execute:</p>
+        <pre><code class="command">git init</code></pre>
+        <p>Isso cria uma subpasta oculta chamada <code>.git</code>, onde o Git armazena todo o histórico e as configurações do projeto.</p>
+
+        <h3>O Fluxo Básico: Modify, Stage, Commit</h3>
+        <p>O fluxo de trabalho no Git consiste em três estágios:</p>
+        <ol>
+            <li><strong>Working Directory:</strong> Onde você está trabalhando, modificando seus arquivos.</li>
+            <li><strong>Staging Area (Index):</strong> Uma área intermediária onde você prepara ("adiciona") as alterações que deseja salvar.</li>
+            <li><strong>Repository (.git dir):</strong> Onde o Git armazena permanentemente as alterações como um "commit".</li>
+        </ol>
+
+        <h3><code>git status</code></h3>
+        <p>Este é o seu comando mais importante. Ele mostra o estado atual do seu repositório: quais arquivos foram modificados, quais estão na staging area e quais não estão sendo rastreados pelo Git.</p>
+        <pre><code class="command">git status</code></pre>
+
+        <h3><code>git add</code></h3>
+        <p>Para adicionar as alterações de um arquivo (ou vários) à Staging Area, usamos o comando <code>git add</code>.</p>
+        <pre><code class="command"># Adiciona um arquivo específico
+git add nome_do_arquivo.html
+
+# Adiciona todos os arquivos modificados na pasta atual e subpastas
+git add .</code></pre>
+
+        <h3><code>git commit</code></h3>
+        <p>Depois que suas alterações estão na Staging Area, você as salva permanentemente no histórico com um "commit". Cada commit tem uma mensagem descritiva.</p>
+        <pre><code class="command">git commit -m "Sua mensagem descritiva aqui"</code></pre>
+        <p><strong>Boas práticas para mensagens de commit:</strong> Seja claro e conciso. Ex: "Adiciona formulário de contato" ou "Corrige bug no login".</p>
+    </section>
+
+    <section id="comandos-avancados">
+        <h2>Comandos Avançados: <code>git reset</code></h2>
+        <p>O comando <code>git reset</code> é usado para desfazer alterações. Ele pode ser um pouco intimidador, pois modifica o histórico de commits, mas é extremamente útil. Vamos ver seus 3 modos principais, do menos ao mais destrutivo.</p>
+        <p>Para os exemplos, imagine que você quer voltar para o commit anterior. Você pode usar <code>HEAD~1</code> para se referir a ele.</p>
+
+        <h3>Modo 1: <code>git reset --soft</code></h3>
+        <p>Este é o modo menos destrutivo.</p>
+        <ul>
+            <li><strong>O que faz?</strong> Ele desfaz o último commit, mas mantém suas alterações na "Staging Area".</li>
+            <li><strong>Quando usar?</strong> Perfeito para quando você comitou algo, mas esqueceu de adicionar um arquivo, ou quer refazer a mensagem de commit sem perder o que já preparou.</li>
+        </ul>
+        <pre><code class="command"># Volta 1 commit, mas deixa as alterações prontas para um novo commit
+git reset --soft HEAD~1</code></pre>
+        <p>Depois de rodar, se você usar <code>git status</code>, verá os mesmos arquivos de antes na Staging Area, como se você tivesse acabado de usar <code>git add</code> neles.</p>
+
+        <h3>Modo 2: <code>git reset --mixed</code> (o padrão)</h3>
+        <p>Se você não especificar um modo, o Git usará o <code>--mixed</code>.</p>
+        <ul>
+            <li><strong>O que faz?</strong> Ele desfaz o último commit e também tira as alterações da Staging Area, colocando-as de volta no seu "Working Directory".</li>
+            <li><strong>Quando usar?</strong> Útil quando você quer refazer completamente o último commit, talvez para separar as alterações em commits diferentes ou para descartar algumas delas.</li>
+        </ul>
+        <pre><code class="command"># Volta 1 commit e move as alterações para a sua área de trabalho
+git reset --mixed HEAD~1
+# Ou simplesmente:
+git reset HEAD~1</code></pre>
+        <p>Depois de rodar, <code>git status</code> mostrará os arquivos como "modificados", mas não prontos para comitar ("not staged").</p>
+
+        <h3>Modo 3: <code>git reset --hard</code> (CUIDADO!)</h3>
+        <p style="color: red; font-weight: bold;">Atenção: Este comando é destrutivo e pode causar perda de trabalho. Use com extrema cautela.</p>
+        <ul>
+            <li><strong>O que faz?</strong> Ele desfaz o último commit e <strong>descarta permanentemente</strong> todas as alterações que estavam nele. Seus arquivos voltam exatamente para o estado em que estavam no commit anterior.</li>
+            <li><strong>Quando usar?</strong> Principalmente para descartar commits que você tem certeza absoluta que não quer mais e cujas alterações são lixo. <strong>Nunca use em commits que já foram enviados para um repositório remoto (com <code>git push</code>)</strong>.</li>
+        </ul>
+        <pre><code class="command"># Volta 1 commit e APAGA TODAS as alterações permanentemente
+git reset --hard HEAD~1</code></pre>
+        <p>Depois de rodar este comando, as alterações dos arquivos são perdidas. Não há um "desfazer" fácil para o <code>reset --hard</code>.</p>
+    </section>
+
+    <section id="github">
+        <h2>3. O que é o GitHub?</h2>
+        <p><strong>GitHub</strong> é uma plataforma online que hospeda repositórios Git. Ele funciona como uma rede social para desenvolvedores e oferece ferramentas para colaboração.</p>
+        <ul>
+            <li>É um <strong>"backup na nuvem"</strong> para o seu código.</li>
+            <li>Permite que você trabalhe em equipe no mesmo projeto.</li>
+            <li>Facilita a revisão de código e a discussão sobre as alterações.</li>
+        </ul>
+        <p>Git é a ferramenta, GitHub é o serviço que usa a ferramenta.</p>
+    </section>
+
+    <section id="comandos-remotos">
+        <h2>4. Trabalhando com Repositórios Remotos (GitHub)</h2>
+        <p>Para conectar seu repositório local a um repositório no GitHub (que você deve criar primeiro no site do GitHub), usamos os seguintes comandos.</p>
+
+        <h3><code>git remote add origin</code></h3>
+        <p>Este comando conecta sua pasta local a um endereço remoto no GitHub. Você só precisa fazer isso uma vez por projeto.</p>
+        <pre><code class="command">git remote add origin URL_DO_SEU_REPOSITORIO_NO_GITHUB.git</code></pre>
+        <p><code>origin</code> é o nome padrão (um apelido) para o seu repositório remoto principal.</p>
+
+        <h3><code>git push</code></h3>
+        <p>Depois de fazer seus commits locais, você precisa "empurrar" (push) essas alterações para o GitHub para que fiquem salvas online e visíveis para outros.</p>
+        <pre><code class="command">git push -u origin main</code></pre>
+        <p><code>-u origin main</code> é usado na primeira vez para ligar sua branch local `main` com a branch `main` remota. Nas próximas vezes, você pode usar apenas <code>git push</code>.</p>
+
+        <h3><code>git pull</code></h3>
+        <p>Se outra pessoa (ou você, de outro computador) fez alterações no repositório do GitHub, você usa <code>git pull</code> para "puxar" (pull) essas atualizações para a sua máquina local.</p>
+        <pre><code class="command">git pull origin main</code></pre>
+
+        <h3><code>git clone</code></h3>
+        <p>Se você quer baixar um projeto que já existe no GitHub para a sua máquina, você usa o comando <code>clone</code>. Ele baixa o projeto e já configura a conexão remota.</p>
+        <pre><code class="command">git clone URL_DO_REPOSITORIO_NO_GITHUB.git</code></pre>
+    </section>
+
+    <section id="seguranca-credenciais">
+        <h2>Segurança: Removendo Credenciais Salvas</h2>
+        <p>Quando você usa o Git para se conectar a repositórios remotos como o GitHub, ele geralmente salva suas credenciais (usuário e senha/token) para não ter que pedi-las toda vez. Isso é feito por um "Credential Helper".</p>
+        <p>No entanto, se você estiver usando um computador público ou compartilhado, é <strong>crucial</strong> remover suas credenciais ao terminar.</p>
+        
+        <h3>Como o Git Salva as Credenciais?</h3>
+        <p>O Git usa um gerenciador de credenciais específico para cada sistema operacional. No Windows, é o <strong>Credential Manager</strong>.</p>
+
+        <h3>Removendo Credenciais no Windows (Duas Formas)</h3>
+
+        <h4>Forma 1: Pelo Painel de Controle (Recomendado)</h4>
+        <ol>
+            <li>Abra o Menu Iniciar e procure por <strong>"Gerenciador de Credenciais"</strong> (ou "Credential Manager").</li>
+            <li>Na janela que abrir, clique em <strong>"Credenciais do Windows"</strong>.</li>
+            <li>Procure por uma entrada que comece com <code>git:https://github.com</code>.</li>
+            <li>Clique nela para expandir e selecione a opção <strong>"Remover"</strong>.</li>
+        </ol>
+        <p>Isso remove sua senha ou token do cofre do Windows de forma segura.</p>
+
+        <h4>Forma 2: Pela Linha de Comando (Avançado)</h4>
+        <p>O Git para Windows vem com uma ferramenta de linha de comando para gerenciar as credenciais. Você pode usá-la para "apagar" as credenciais de um site específico.</p>
+        <pre><code># Este comando abre um prompt para você digitar o host do qual quer apagar a senha
+# Você digitaria: host=github.com e pressionaria Enter duas vezes.
+git credential-manager-core erase</code></pre>
+        <p>Na próxima vez que você executar um <code>git pull</code> ou <code>git push</code>, o Git pedirá seu nome de usuário e senha novamente, e você pode simplesmente fechar a janela para não salvar as novas credenciais.</p>
+    </section>
+
 </body>
 </html>

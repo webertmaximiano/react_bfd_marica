@@ -298,3 +298,54 @@ console.log("Template Literal (com aspas):", fraseComAspas);
       // Problema: console.log("Lista de Frutas (usando `for`):");
       // Solução:  console.log(`Lista de Frutas (usando 'for'):`); // Usando template literal e aspas simples internas
 */
+
+console.log("--------------------------------------------------\n");
+
+// --- 7. ESTRUTURA CONDICIONAL `switch` ---
+console.log("### 7. Estrutura Condicional `switch` ###");
+
+/*
+  A estrutura `switch` é uma alternativa ao `if...else if...else` quando você tem
+  múltiplas condições baseadas no valor de uma única variável. Ela torna o código
+  mais legível em cenários onde há muitos `else if` encadeados.
+*/
+
+let mes = 2; // Vamos usar um número para representar o mês (ex: 1=Jan, 2=Fev, etc.)
+let estacaoDoAno = "";
+let outputSwitch = "";
+
+console.log(`Verificando a estação para o mês: ${mes}`);
+
+switch (mes) {
+    case 12:
+    case 1:
+    case 2:
+        estacaoDoAno = "Verão";
+        break;
+    case 3:
+    case 4:
+    case 5:
+        estacaoDoAno = "Outono";
+        break;
+    case 6:
+    case 7:
+    case 8:
+        estacaoDoAno = "Inverno";
+        break;
+    case 9:
+    case 10:
+    case 11:
+        estacaoDoAno = "Primavera";
+        break;
+    default:
+        estacaoDoAno = "Opção inválida. Por favor, insira um número de 1 a 12.";
+}
+
+outputSwitch = `Mês: ${mes} -> Estação: ${estacaoDoAno}`;
+console.log(outputSwitch);
+
+// Exibindo o resultado no HTML
+document.getElementById('switch-output').innerHTML = `
+    <p>Mês escolhido: <strong>${mes}</strong></p>
+    <p>Estação do Ano: <strong>${estacaoDoAno}</strong></p>
+`;

@@ -69,6 +69,42 @@ console.log('O tipo de um array é:', typeof minhaLista); // Saída: object
 // Para verificar se um valor é realmente um array, usamos `Array.isArray()`.
 console.log("O valor é um array?", Array.isArray(minhaLista)); // Saída: true
 
+// --- Exemplo prático do Array.isArray() ---
+console.log("\n--- Exemplos de uso do Array.isArray() ---");
+
+let variavel1 = [1, 2, 3]; // Isto é um Array
+let variavel2 = { nome: 'João', idade: 30 }; // Isto é um Objeto
+let variavel3 = "Isto é uma string";
+let variavel4 = 123;
+
+console.log(`A variavel1 é um array? ${Array.isArray(variavel1)}`); // Saída: true
+console.log(`A variavel2 é um array? ${Array.isArray(variavel2)}`); // Saída: false
+console.log(`A variavel3 é um array? ${Array.isArray(variavel3)}`); // Saída: false
+console.log(`A variavel4 é um array? ${Array.isArray(variavel4)}`); // Saída: false
+
+// Exemplo em uma função: somar apenas se o argumento for um array de números
+function somarElementos(dados) {
+    // Primeiro, verificamos se 'dados' é de fato um array
+    if (Array.isArray(dados)) {
+        let soma = 0;
+        for (let i = 0; i < dados.length; i++) {
+            // Verificamos se o elemento atual é um número antes de somar
+            if (typeof dados[i] === 'number') {
+                soma = soma + dados[i];
+            }
+        }
+        console.log(`A soma dos números no array é: ${soma}`);
+    } else {
+        // Se não for um array, informamos o erro
+        console.log("Erro: O valor fornecido não é um array.");
+    }
+}
+
+somarElementos([10, 20, 30, 5]); // Caso de sucesso
+somarElementos("não sou um array"); // Caso de falha
+somarElementos({a:1, b:2}); // Caso de falha
+
+
 // 3. typeof de um Objeto
 let meuObjeto = { chave: 'valor' };
 console.log('O tipo de um objeto é:', typeof meuObjeto); // Saída: object
@@ -143,7 +179,15 @@ let aluno = {
     materias: ["Algoritmos", "Banco de Dados", "Engenharia de Software"]
 };
 
+const madmax = {
+    marca: "Ford",
+    modelo: "Escort",
+    ano: 1993
+}
+
 console.log("Objeto completo:", aluno);
+console.log("Objeto Madmax:", madmax);
+
 
 // Acessando propriedades do objeto
 // Notação de Ponto (dot notation) - a mais comum
@@ -173,3 +217,76 @@ aluno.apresentar = function() {
 
 // Chamando o método do objeto
 aluno.apresentar();
+
+console.log("--------------------------------------------------");
+
+/*
+===================================
+  OPERADORES LÓGICOS
+===================================
+
+Operadores lógicos são usados para combinar ou inverter expressões booleanas (true/false),
+permitindo criar condições mais complexas.
+
+*/
+
+console.log("### OPERADORES LÓGICOS ###");
+
+// --- Operador && (E / AND) ---
+// Retorna `true` somente se TODAS as condições forem verdadeiras.
+console.log("\n--- Operador && (E / AND) ---");
+console.log(true && true);   // Saída: true
+console.log(true && false);  // Saída: false
+console.log(false && true);  // Saída: false
+console.log(false && false); // Saída: false
+
+// Exemplo prático: Para entrar em um brinquedo, a pessoa precisa ter mais de 1.40m de altura E ter mais de 12 anos.
+let altura = 1.50;
+let idadePessoa = 15;
+let podeEntrar = (altura > 1.40) && (idadePessoa > 12);
+console.log(`Pode entrar no brinquedo? ${podeEntrar}`); // Saída: true
+
+
+// --- Operador || (OU / OR) ---
+// Retorna `true` se PELO MENOS UMA das condições for verdadeira.
+console.log("\n--- Operador || (OU / OR) ---");
+console.log(true || true);   // Saída: true
+console.log(true || false);  // Saída: true
+console.log(false || true);  // Saída: true
+console.log(false || false); // Saída: false
+
+// Exemplo prático: Para ter desconto, a pessoa precisa ser estudante OU ser idosa.
+let ehEstudante = false;
+let ehIdoso = true;
+let temDesconto = ehEstudante || ehIdoso;
+console.log(`Tem direito a desconto? ${temDesconto}`); // Saída: true
+
+
+// --- Operador ! (NÃO / NOT) ---
+// Inverte o valor de uma expressão booleana.
+console.log("\n--- Operador ! (NÃO / NOT) ---");
+console.log(!true);  // Saída: false
+console.log(!false); // Saída: true
+
+// Exemplo prático: Verificar se um usuário NÃO está logado.
+let usuarioLogado = false;
+if (!usuarioLogado) {
+    console.log("Atenção: Você não está logado! Por favor, faça o login.");
+}
+
+
+// --- Combinando Operadores ---
+console.log("\n--- Combinando Operadores ---");
+// Exemplo: Para acesso VIP, o usuário precisa ser (admin OU moderador) E estar logado.
+let perfil = "admin";
+let logado = true;
+
+let temAcessoVIP = (perfil === "admin" || perfil === "moderador") && logado;
+console.log(`Tem acesso VIP? ${temAcessoVIP}`); // Saída: true
+
+// Exemplo 2: Acesso negado
+perfil = "usuario";
+logado = true;
+temAcessoVIP = (perfil === "admin" || perfil === "moderador") && logado;
+console.log(`Tem acesso VIP (sendo usuário)? ${temAcessoVIP}`); // Saída: false
+

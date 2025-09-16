@@ -24,15 +24,15 @@ Para navegar pelo conteúdo, siga os links abaixo:
 
 ## Fluxo de Sala de Aula
 
-*   [**Aula 04: HTML**](fluxo_sala_de_aula_parque_tecnologico/aula-04/index.html)
-*   [**Aula 05: HTML**](fluxo_sala_de_aula_parque_tecnologico/aula-05/index.html)
-*   [**Aula 06: CSS**](fluxo_sala_de_aula_parque_tecnologico/aula-06/index.html)
-*   [**Aula 07: CSS**](fluxo_sala_de_aula_parque_tecnologico/aula-07/index.html)
-*   [**Aula 08: CSS**](fluxo_sala_de_aula_parque_tecnologico/aula-08/index.html)
-*   [**Aula 09: JavaScript**](fluxo_sala_de_aula_parque_tecnologico/aula-09/index.html)
-*   [**Aula 10: JavaScript**](fluxo_sala_de_aula_parque_tecnologico/aula-10/index.html)
-*   [**Aula 11: JavaScript**](fluxo_sala_de_aula_parque_tecnologico/aula-11/index.html)
-*   [**Aula 12: JavaScript**](fluxo_sala_de_aula_parque_tecnologico/aula-12/index.html)
+*   [**Aula 04: HTML**](/fluxo_sala_de_aula_parque_tecnologico/aula-04/index.html)
+*   [**Aula 05: HTML**](/fluxo_sala_de_aula_parque_tecnologico/aula-05/index.html)
+*   [**Aula 06: CSS**](/fluxo_sala_de_aula_parque_tecnologico/aula-06/index.html)
+*   [**Aula 07: CSS**](/fluxo_sala_de_aula_parque_tecnologico/aula-07/index.html)
+*   [**Aula 08: CSS**](/fluxo_sala_de_aula_parque_tecnologico/aula-08/index.html)
+*   [**Aula 09: JavaScript**](/fluxo_sala_de_aula_parque_tecnologico/aula-09/index.html)
+*   [**Aula 10: JavaScript**](/fluxo_sala_de_aula_parque_tecnologico/aula-10/index.html)
+*   [**Aula 11: JavaScript**](/fluxo_sala_de_aula_parque_tecnologico/aula-11/index.html)
+*   [**Aula 12: JavaScript**](/fluxo_sala_de_aula_parque_tecnologico/aula-12/index.html)
 
 ---
 

@@ -274,3 +274,31 @@ function contarCaracteresInterativo() {
 
 // Adiciona um "ouvinte de evento" (event listener) ao botão
 btnContarCaracteres.addEventListener('click', contarCaracteresInterativo);
+
+
+// --- EXERCÍCIO: PERSONALIZAR BORDA --- 
+console.log("### EXERCÍCIO: Personalizar Borda ###");
+
+// Referências aos elementos HTML
+const borderWidth = document.getElementById('borderWidth');
+const borderStyle = document.getElementById('borderStyle');
+const borderColor = document.getElementById('borderColor');
+const bordaPersonalizadaOutput = document.getElementById('borda-personalizada-output');
+
+// Função para atualizar a borda
+function atualizarBorda() {
+    const width = borderWidth.value + 'px';
+    const style = borderStyle.value;
+    const color = borderColor.value;
+
+    bordaPersonalizadaOutput.style.border = `${width} ${style} ${color}`;
+    console.log(`Borda atualizada para: ${width} ${style} ${color}`);
+}
+
+// Adiciona event listeners para os inputs
+borderWidth.addEventListener('input', atualizarBorda);
+borderStyle.addEventListener('input', atualizarBorda);
+borderColor.addEventListener('input', atualizarBorda);
+
+// Chama a função uma vez para iniciar com os valores padrão
+atualizarBorda();

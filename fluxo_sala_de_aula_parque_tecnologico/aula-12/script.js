@@ -302,3 +302,68 @@ borderColor.addEventListener('input', atualizarBorda);
 
 // Chama a função uma vez para iniciar com os valores padrão
 atualizarBorda();
+
+// --- EXERCÍCIO: BOBBIE GOODS CUSTOMIZER ---
+console.log("### EXERCÍCIO: Bobbie Goods Customizer ###");
+
+// Referências aos elementos da casa
+const houseWall = document.getElementById('house-wall');
+const houseRoof = document.getElementById('house-roof');
+const houseDoor = document.getElementById('house-door');
+
+// Referências aos controles
+const wallColorInput = document.getElementById('wallColor');
+const roofColorInput = document.getElementById('roofColor');
+const doorColorInput = document.getElementById('doorColor');
+const houseHeightInput = document.getElementById('houseHeight');
+const houseWidthInput = document.getElementById('houseWidth');
+const doorHeightInput = document.getElementById('doorHeight');
+
+// Funções para atualizar a casa
+function updateWallColor() {
+    houseWall.style.backgroundColor = wallColorInput.value;
+}
+
+function updateRoofColor() {
+    houseRoof.style.borderBottomColor = roofColorInput.value;
+}
+
+function updateDoorColor() {
+    houseDoor.style.backgroundColor = doorColorInput.value;
+}
+
+function updateHouseDimensions() {
+    const newWidth = houseWidthInput.value;
+    const newHeight = houseHeightInput.value;
+
+    houseWall.style.width = `${newWidth}px`;
+    houseWall.style.height = `${newHeight}px`;
+
+    // Ajusta o telhado proporcionalmente à largura da parede
+    const roofWidth = newWidth / 2 + 15;
+    houseRoof.style.borderLeftWidth = `${roofWidth}px`;
+    houseRoof.style.borderRightWidth = `${roofWidth}px`;
+}
+
+function updateDoorHeight() {
+    houseDoor.style.height = `${doorHeightInput.value}px`;
+}
+
+// Adiciona event listeners para os controles
+wallColorInput.addEventListener('input', updateWallColor);
+roofColorInput.addEventListener('input', updateRoofColor);
+doorColorInput.addEventListener('input', updateDoorColor);
+houseHeightInput.addEventListener('input', updateHouseDimensions);
+houseWidthInput.addEventListener('input', updateHouseDimensions);
+doorHeightInput.addEventListener('input', updateDoorHeight);
+
+// Chama as funções uma vez para garantir que a casa comece com os valores corretos dos inputs
+function initializeCustomizer() {
+    updateWallColor();
+    updateRoofColor();
+    updateDoorColor();
+    updateHouseDimensions();
+    updateDoorHeight();
+}
+
+initializeCustomizer();

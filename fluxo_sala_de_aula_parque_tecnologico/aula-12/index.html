@@ -95,6 +95,81 @@
                 <input type="color" id="borderColor" value="#ff0000">
             </div>
         </section>
+    <section id="margin-pratica">
+            <h2>Praticando com Margin</h2>
+            <p>A propriedade <code>margin</code> é usada para criar espaço ao redor dos elementos, fora de quaisquer bordas definidas.</p>
+            <div class="margin-box margin-box-1">Eu tenho uma margem de 20px em todos os lados.</div>
+            <div class="margin-box margin-box-2">Eu tenho uma margem superior e inferior de 40px, e uma margem esquerda e direita de 10px.</div>
+        </section>
+
+        <section id="margin-collapse">
+            <h2>Colapso de Margens (Margin Collapse)</h2>
+            <p>O colapso de margens acontece quando as margens verticais de dois elementos em bloco se tocam. A margem resultante não é a soma das duas, mas sim a maior das duas margens.</p>
+            <div class="collapse-box box-a">Eu tenho <code>margin-bottom: 30px</code>.</div>
+            <div class="collapse-box box-b">Eu tenho <code>margin-top: 50px</code>. O espaço entre nós deveria ser 80px (30 + 50), mas será de 50px por causa do colapso de margens.</div>
+        </section>
+
+        <section id="box-sizing-pratica">
+            <h2>Praticando com Box-Sizing</h2>
+            <p>A propriedade <code>box-sizing</code> nos permite incluir o padding e a borda na largura e altura totais de um elemento.</p>
+            <div class="box-sizing-container">
+                <div class="box-sizing-box content-box-sizing">
+                    <code>box-sizing: content-box;</code> (padrão)<br>
+                    Largura: 200px<br>
+                    Padding: 20px<br>
+                    Borda: 5px<br>
+                    <strong>Largura total: 200 + 20*2 + 5*2 = 250px</strong>
+                </div>
+                <div class="box-sizing-box border-box-sizing">
+                    <code>box-sizing: border-box;</code><br>
+                    Largura: 200px<br>
+                    Padding: 20px<br>
+                    Borda: 5px<br>
+                    <strong>Largura total: 200px</strong>
+                </div>
+            </div>
+        </section>
+    <section id="bobbie-goods-customizer">
+            <h2>Bobbie Goods Customizer</h2>
+            <p>Use os controles para personalizar a casa abaixo e ver o poder do CSS e JavaScript!</p>
+
+            <div class="customizer-container">
+                <div class="house-display">
+                    <div id="house-roof" class="house-part"></div>
+                    <div id="house-wall" class="house-part">
+                        <div id="house-door" class="house-part"></div>
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <h3>Controles da Casa</h3>
+                    
+                    <label for="wallColor">Cor da Parede:</label>
+                    <input type="color" id="wallColor" value="#f0e68c">
+
+                    <label for="roofColor">Cor do Telhado:</label>
+                    <input type="color" id="roofColor" value="#8b4513">
+
+                    <label for="doorColor">Cor da Porta:</label>
+                    <input type="color" id="doorColor" value="#a0522d">
+
+                    <hr>
+
+                    <label for="houseHeight">Altura da Parede (px):</label>
+                    <input type="range" id="houseHeight" min="50" max="250" value="150">
+
+                    <label for="houseWidth">Largura da Parede (px):</label>
+                    <input type="range" id="houseWidth" min="50" max="250" value="150">
+
+                    <hr>
+
+                    <label for="doorHeight">Altura da Porta (px):</label>
+                    <input type="range" id="doorHeight" min="20" max="120" value="60">
+
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <script src="script.js"></script>

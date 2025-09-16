@@ -63,3 +63,152 @@ section {
     border: 2px dashed #f1faee; /* Borda do conteúdo */
     display: inline-block; /* Para que o padding e border funcionem bem */
 }
+
+/* Estilos para a prática de Margin */
+.margin-box {
+    background-color: #fca311;
+    color: #14213d;
+    padding: 15px;
+    border: 2px solid #14213d;
+    text-align: center;
+}
+
+.margin-box-1 {
+    margin: 20px;
+}
+
+.margin-box-2 {
+    margin: 40px 10px;
+}
+
+/* Estilos para o Colapso de Margens */
+.collapse-box {
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+.box-a {
+    background-color: #2a9d8f;
+    margin-bottom: 30px;
+}
+
+.box-b {
+    background-color: #e76f51;
+    margin-top: 50px;
+}
+
+/* Estilos para a prática de Box-Sizing */
+.box-sizing-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.box-sizing-box {
+    width: 200px; /* Largura definida para ambos */
+    padding: 20px;
+    border: 5px solid #003049;
+    background-color: #d62828;
+    color: white;
+    text-align: center;
+}
+
+.content-box-sizing {
+    box-sizing: content-box; /* Comportamento padrão */
+}
+
+.border-box-sizing {
+    box-sizing: border-box;
+}
+
+/* Estilos para o Bobbie Goods Customizer */
+.customizer-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.house-display {
+    flex: 1;
+    min-width: 250px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #f0f8ff;
+    border: 2px dashed #add8e6;
+    padding-bottom: 10px;
+}
+
+.controls {
+    flex: 1;
+    min-width: 250px;
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.controls h3 {
+    margin-top: 0;
+    color: #0056b3;
+}
+
+.controls label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.controls input[type="color"] {
+    width: 100%;
+    height: 30px;
+    border: 1px solid #ccc;
+    padding: 2px;
+}
+
+.controls input[type="range"] {
+    width: 100%;
+}
+
+.controls hr {
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px solid #dee2e6;
+}
+
+.house-part {
+    transition: all 0.2s ease-in-out;
+}
+
+#house-wall {
+    width: 150px;
+    height: 150px;
+    background-color: #f0e68c; /* Cor inicial da parede */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    border: 2px solid #333;
+}
+
+#house-roof {
+    width: 0;
+    height: 0;
+    border-left: 90px solid transparent;
+    border-right: 90px solid transparent;
+    border-bottom: 70px solid #8b4513; /* Cor inicial do telhado */
+    margin-bottom: -2px; /* Para sobrepor a borda da parede */
+}
+
+#house-door {
+    width: 40px;
+    height: 60px;
+    background-color: #a0522d; /* Cor inicial da porta */
+    margin-bottom: 10px;
+    border: 2px solid #333;
+}

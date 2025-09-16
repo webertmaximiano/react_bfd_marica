@@ -1,0 +1,65 @@
+/* Estilos básicos para consistência */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    background-color: #f8f9fa;
+    color: #212529;
+    margin: 0;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    color: #0056b3;
+}
+
+h2 {
+    color: #343a40;
+    border-bottom: 2px solid #dee2e6;
+    padding-bottom: 5px;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+section {
+    background-color: #ffffff;
+    margin-bottom: 25px;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.output-box {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #e9ecef;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    min-height: 50px;
+    font-family: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+/* Estilos para o Box Model */
+.box-example {
+    background-color: #a8dadc; /* Cor de fundo para a área externa */
+    margin: 30px; /* Exemplo de margin */
+    padding: 20px; /* Exemplo de padding */
+    border: 5px solid #457b9d; /* Exemplo de border */
+    text-align: center;
+}
+
+.content-box {
+    background-color: #e63946; /* Cor de fundo para o conteúdo */
+    color: #f1faee;
+    padding: 15px; /* Padding interno do conteúdo */
+    border: 2px dashed #f1faee; /* Borda do conteúdo */
+    display: inline-block; /* Para que o padding e border funcionem bem */
+}

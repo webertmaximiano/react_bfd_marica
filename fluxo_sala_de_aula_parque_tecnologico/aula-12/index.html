@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 12 - Funções e Box Model</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Aula 12: Funções em JavaScript e Box Model</h1>
+        <p>Explorando a modularização de código com funções e revisando o Box Model do CSS.</p>
+    </header>
+
+    <main>
+        <section id="funcoes-js">
+            <h2>Modularização com Funções JavaScript</h2>
+            <p>Abra o console (F12) para ver os exemplos de funções em ação.</p>
+            <div id="funcoes-output" class="output-box">
+                <!-- Saída das funções será exibida aqui -->
+                <hr>
+                <h3>Função Dobrar Interativa:</h3>
+                <label for="numeroDobrar">Digite um número:</label>
+                <input type="number" id="numeroDobrar" value="10">
+                <button id="btnDobrar">Dobrar!</button>
+                <div id="dobrar-interativo-output"></div>
+
+                <hr>
+                <h3>Função Saudação Interativa:</h3>
+                <label for="nomeSaudacao">Digite seu nome:</label>
+                <input type="text" id="nomeSaudacao" value="Visitante">
+                <button id="btnSaudar">Saudar!</button>
+                <div id="saudacao-interativa-output"></div>
+
+                <hr>
+                <h3>Função É Par? Interativa:</h3>
+                <label for="numeroEhPar">Digite um número:</label>
+                <input type="number" id="numeroEhPar" value="4">
+                <button id="btnEhPar">Verificar Par</button>
+                <div id="ehpar-interativo-output"></div>
+
+                <hr>
+                <h3>Função Maior Número? Interativa:</h3>
+                <label for="num1Maior">Número 1:</label>
+                <input type="number" id="num1Maior" value="15">
+                <label for="num2Maior">Número 2:</label>
+                <input type="number" id="num2Maior" value="7">
+                <button id="btnMaiorNumero">Verificar Maior</button>
+                <div id="maior-numero-interativo-output"></div>
+
+                <hr>
+                <h3>Função Contar Caracteres? Interativa:</h3>
+                <label for="textoContar">Digite um texto:</label>
+                <input type="text" id="textoContar" value="Olá Mundo!">
+                <button id="btnContarCaracteres">Contar Caracteres</button>
+                <div id="contar-caracteres-interativo-output"></div>
+            </div>
+        </section>
+
+        <section id="box-model">
+            <h2>Revisão do Box Model (Content, Padding, Border, Margin)</h2>
+            <p>Este exemplo visualiza os componentes do Box Model.</p>
+            <div class="box-example">
+                <div class="content-box">
+                    Conteúdo
+                </div>
+            </div>
+            <p>Inspecione o elemento acima no navegador para ver o Box Model em detalhes.</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

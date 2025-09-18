@@ -109,3 +109,18 @@ main { padding: 120px 20px 20px; } /* espaço extra para ñ esconder conteúdo a
     text-align: center;
     padding: 20px;
 }
+
+/* O que são Media Queries? */
+.media-query-example {
+    background: blue;
+    font-size: 18px;
+    padding: 20px;
+    color: white;
+}
+
+@media (max-width: 300px) {
+    .media-query-example {
+        background: green;
+        font-size: 14px;
+    }
+}

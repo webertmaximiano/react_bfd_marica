@@ -1,0 +1,52 @@
+/* Exercicio 1 - Gabarito */
+.caixa1 {
+    display: block;
+    background: blue;
+    padding: 10px;
+    margin: 5px;
+    color: white;
+}
+.caixa2 {
+    display: inline;
+    background: green;
+    padding: 10px;
+    margin: 5px;
+    color: white;
+}
+.caixa3 {
+    display: inline-block;
+    background: coral;
+    width: 120px;
+    height: 50px;
+    margin: 5px;
+    color: white;
+}
+
+/* Exercicio 2 - Gabarito */
+.menu {
+    background: #ec5151;
+    padding: 10px;
+}
+.menu .botao {
+    display: inline-block;
+    background: blue;
+    color: white;
+    padding: 10px 20px;
+    margin-right: 5px;
+    border-radius: 5px;
+}
+
+/* Exercicio 3 - Gabarito */
+body { margin: 0; } /* remove margens padrão do navegador */
+.cabecalho {
+    position: fixed;
+    width: 100%; /* ocupa toda a largura da tela */
+    background: blue;
+    color: white;
+    padding: 15px;
+    z-index: 1000; /* fica por cima de outros elementos */
+}
+.cabecalho h1 { display: inline-block; }
+.cabecalho nav { display: inline-block; margin-left: 30px; }
+.cabecalho nav a { color: white; margin: 0 10px; }
+main { padding: 120px 20px 20px; } /* espaço extra para ñ esconder conteúdo atrás do header */

@@ -50,3 +50,18 @@ body { margin: 0; } /* remove margens padrão do navegador */
 .cabecalho nav { display: inline-block; margin-left: 30px; }
 .cabecalho nav a { color: white; margin: 0 10px; }
 main { padding: 120px 20px 20px; } /* espaço extra para ñ esconder conteúdo atrás do header */
+
+/* Exemplo de uso de position (css) */
+.caixa {
+    width: 100px;
+    height: 50px;
+    margin: 10px;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+}
+.static { background: gray; position: static; }
+.relative { background: blue; position: relative; top: 20px; left: 20px; }
+.absolute { background: red; position: absolute; top: 0; right: 0; }
+.fixed { background: green; position: fixed; bottom: 0; right: 0; }
+.sticky { background: orange; position: sticky; top: 0; }

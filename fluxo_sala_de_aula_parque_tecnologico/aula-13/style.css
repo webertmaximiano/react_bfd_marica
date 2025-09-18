@@ -65,3 +65,47 @@ main { padding: 120px 20px 20px; } /* espaço extra para ñ esconder conteúdo a
 .absolute { background: red; position: absolute; top: 0; right: 0; }
 .fixed { background: green; position: fixed; bottom: 0; right: 0; }
 .sticky { background: orange; position: sticky; top: 0; }
+
+/* Exemplo básico de Flexbox */
+.container {
+    display: flex; /* ativa o flexbox no container */
+    background: gray;
+}
+.item {
+    background: blue;
+    color: white;
+    margin: 10px;
+    padding: 20px;
+}
+
+/* Propriedades dos Itens (Filhos) no Flexbox */
+.container-filhos {
+    display: flex;
+    background: gray;
+    height: 200px;
+}
+.item-filhos {
+    background: blue;
+    color: white;
+    margin: 5px;
+    padding: 20px;
+}
+.item-filhos.a { flex-grow: 1; } /* cresce pouco */
+.item-filhos.b { flex-grow: 2; } /* cresce o dobro do A */
+.item-filhos.c { align-self: flex-end; } /* desce sozinho no eixo cruzado */
+
+/* Conceitos básicos de Grid Layout */
+.container-grid {
+    display: grid; /* ativa o grid */
+    grid-template-columns: 50px 100px 150px; /* 3 colunas fixas */
+    grid-template-rows: auto auto; /* 2 linhas automáticas */
+    gap: 10px; /* espaçamento */
+    background: gray;
+    padding: 10px;
+}
+.item-grid {
+    background: blue;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}

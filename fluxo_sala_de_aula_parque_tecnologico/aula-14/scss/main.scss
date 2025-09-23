@@ -1,31 +1,27 @@
-$cor-principal: #3498db;
+@use 'cores';
+@use 'mixins';
+
 $fonte-principal: 'Arial', sans-serif;
 
-@mixin centralizar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 h1 {
-    color: $cor-principal;
+    color: cores.$cor-principal;
     font-family: $fonte-principal;
 }
 
 button {
-    background: $cor-principal;
-    border: 2px solid $cor-principal;
+    background: cores.$cor-principal;
+    border: 2px solid cores.$cor-principal;
 }
 
 .container {
-    @include centralizar;
+    @include mixins.centralizar;
     height: 200px;
     background: gray;
 }
 
 .exemplo-variaveis {
     .texto-primario {
-        color: $cor-principal;
+        color: cores.$cor-principal;
     }
 
     .texto-secundario {
@@ -60,27 +56,35 @@ nav {
     }
 }
 
-@mixin centralizar-mixin-simples {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .container-mixin-simples {
-    @include centralizar-mixin-simples;
+    @include mixins.centralizar;
     height: 200px;
     background: gray;
 }
 
-@mixin borda-redonda($raio) {
-    border-radius: $raio;
-}
-
 .botao-com-parametro {
-    @include borda-redonda(10px);
+    @include mixins.borda-redonda(10px);
 }
 
 .card-com-parametro {
-    @include borda-redonda(20px);
+    @include mixins.borda-redonda(20px);
     background-color: gray;
+}
+
+.mensagem {
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-weight: bold;
+}
+
+.alerta {
+    @extend .mensagem;
+    background: red;
+    color: white;
+}
+
+.sucesso {
+    @extend .mensagem;
+    background: green;
+    color: white;
 }

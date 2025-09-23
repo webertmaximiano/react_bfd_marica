@@ -65,4 +65,20 @@ nav ul li a {
   background-color: gray;
 }
 
+.mensagem, .sucesso, .alerta {
+  padding: 10px;
+  border: 1px solid #ccc;
+  font-weight: bold;
+}
+
+.alerta {
+  background: red;
+  color: white;
+}
+
+.sucesso {
+  background: green;
+  color: white;
+}
+
 /*# sourceMappingURL=style.css.map */

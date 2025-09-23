@@ -118,7 +118,7 @@ main { padding: 120px 20px 20px; } /* espaço extra para ñ esconder conteúdo a
     color: white;
 }
 
-@media (max-width: 300px) {
+@media (max-width: 600px) {
     .media-query-example {
         background: green;
         font-size: 14px;

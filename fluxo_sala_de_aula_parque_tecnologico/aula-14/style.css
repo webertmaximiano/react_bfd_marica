@@ -1,0 +1,68 @@
+h1 {
+  color: #3498db;
+  font-family: "Arial", sans-serif;
+}
+
+button {
+  background: #3498db;
+  border: 2px solid #3498db;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  background: gray;
+}
+
+.exemplo-variaveis .texto-primario {
+  color: #3498db;
+}
+.exemplo-variaveis .texto-secundario {
+  font-family: "Arial", sans-serif;
+}
+
+nav {
+  background: #333;
+}
+nav ul {
+  list-style: none;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.botao-ativo {
+  color: white;
+  background: blue;
+}
+.botao-ativo:hover {
+  background: #3498db;
+}
+.botao-ativo.ativo {
+  background: green;
+}
+
+.container-mixin-simples {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  background: gray;
+}
+
+.botao-com-parametro {
+  border-radius: 10px;
+}
+
+.card-com-parametro {
+  border-radius: 20px;
+  background-color: gray;
+}
+
+/*# sourceMappingURL=style.css.map */

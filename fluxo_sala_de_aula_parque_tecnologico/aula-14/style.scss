@@ -1,0 +1,86 @@
+$cor-principal: #3498db;
+$fonte-principal: 'Arial', sans-serif;
+
+@mixin centralizar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: $cor-principal;
+    font-family: $fonte-principal;
+}
+
+button {
+    background: $cor-principal;
+    border: 2px solid $cor-principal;
+}
+
+.container {
+    @include centralizar;
+    height: 200px;
+    background: gray;
+}
+
+.exemplo-variaveis {
+    .texto-primario {
+        color: $cor-principal;
+    }
+
+    .texto-secundario {
+        font-family: $fonte-principal;
+    }
+}
+
+nav {
+    background: #333;
+    ul {
+        list-style: none;
+        li {
+            display: inline-block;
+            a {
+                color: white;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.botao-ativo {
+    color: white;
+    background: blue;
+
+    &:hover {
+        background: #3498db;
+    }
+
+    &.ativo {
+        background: green;
+    }
+}
+
+@mixin centralizar-mixin-simples {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-mixin-simples {
+    @include centralizar-mixin-simples;
+    height: 200px;
+    background: gray;
+}
+
+@mixin borda-redonda($raio) {
+    border-radius: $raio;
+}
+
+.botao-com-parametro {
+    @include borda-redonda(10px);
+}
+
+.card-com-parametro {
+    @include borda-redonda(20px);
+    background-color: gray;
+}

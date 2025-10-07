@@ -103,3 +103,47 @@ const c1Conta = new Conta("Maria", 100); // Renamed to c1Conta to avoid conflict
 c1Conta.depositar(50);
 c1Conta.sacar(30);
 c1Conta.verSaldo();
+
+// --- Métodos com Parâmetros e Retorno (Classe Calculadora) ---
+class Calculadora {
+  somar(a: number, b: number): number {
+    return a + b;
+  }
+
+  exibirResultado(resultado: number): void {
+    console.log(`O resultado é: ${resultado}`);
+  }
+}
+
+const calc = new Calculadora();
+const total = calc.somar(5, 3);
+calc.exibirResultado(total); // O resultado é: 8
+
+// --- Gabarito - Exercício 3 (Classe Aluno) ---
+class Aluno {
+  nome: string;
+  nota1: number;
+  nota2: number;
+
+  constructor(nome: string, nota1: number, nota2: number) {
+    this.nome = nome;
+    this.nota1 = nota1;
+    this.nota2 = nota2;
+  }
+
+  media(): number {
+    return (this.nota1 + this.nota2) / 2;
+  }
+
+  situacao(): void {
+    const media = this.media();
+    if (media >= 7) {
+      console.log(`${this.nome} está Aprovado.`);
+    } else {
+      console.log(`${this.nome} está Reprovado.`);
+    }
+  }
+}
+
+const aluno1 = new Aluno("Carlos", 8, 7);
+aluno1.situacao(); // Carlos está Aprovado.

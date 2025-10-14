@@ -83,3 +83,24 @@ const bone = new Produto("Boné", 29);
 loja.adicionarProduto(bone);
 console.log("\n--- Produtos da loja (com Boné) ---");
 loja.mostrarProdutos();
+
+// --- Gabarito Exercício 1 (Classe Cachorro) ---
+class Cachorro {
+  nome: string;
+  raca: string;
+
+  constructor(nome: string, raca: string) {
+    this.nome = nome;
+    this.raca = raca;
+  }
+
+  latir() {
+    console.log(`O cachorro ${this.nome} (${this.raca}) está latindo!`);
+  }
+}
+
+const c1Cachorro = new Cachorro("Rex", "Labrador");
+const c2Cachorro = new Cachorro("Luna", "Poodle");
+
+c1Cachorro.latir();
+c2Cachorro.latir();

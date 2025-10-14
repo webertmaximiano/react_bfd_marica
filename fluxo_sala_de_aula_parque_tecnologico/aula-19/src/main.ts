@@ -77,3 +77,9 @@ loja.adicionarProduto(p3);
 
 // Mostrando os produtos cadastrados
 loja.mostrarProdutos();
+
+// --- Desafio: Adicionar Boné ---
+const bone = new Produto("Boné", 29);
+loja.adicionarProduto(bone);
+console.log("\n--- Produtos da loja (com Boné) ---");
+loja.mostrarProdutos();

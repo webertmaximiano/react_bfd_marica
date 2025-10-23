@@ -1,10 +1,44 @@
-/* src/App.css */
+/* src/App.css ATUALIZADO */
 
-body {
-  font-family: Arial, Verdana;
-  margin: 0;
-  padding: 0;
+/* Estilos para organizar as aulas */
+h1 {
+  text-align: center;
+  color: var(--text); /* OK: Título principal branco sobre roxo */
+  font-size: 2.5em;   /* NOVO: Aumentar um pouco */
+  margin: 20px 0;
 }
+
+/* A GRANDE MUDANÇA ESTÁ AQUI 
+  Trocamos o container da aula para um "cartão" claro 
+*/
+.aula-container {
+  background-color: #f4f4f4;  /* NOVO: Fundo BEM claro para o container */
+  color: #333;                /* NOVO: Texto padrão escuro aqui dentro */
+  margin: 20px auto;           /* NOVO: Centralizar e dar espaço */
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 90%;              /* NOVO: Limitar a largura */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* NOVO: Sombra sutil */
+}
+
+/* Título de cada aula (h2) */
+.aula-container h2 {
+  text-align: center;
+  border-bottom: 2px solid var(--bg); /* MUDANÇA: Borda roxa (do tema) */
+  color: var(--bg);                 /* MUDANÇA: Título roxo (do tema) */
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+/* Título de cada exercício (h3) */
+.aula-container h3 {
+    color: #555;
+    margin-top: 30px;
+    border-top: 1px dashed #ccc;
+    padding-top: 20px;
+}
+
+/* --- Estilos Aula 21 --- */
 
 .header, .footer {
   background-color: #333;
@@ -25,4 +59,63 @@ body {
   margin: 10px;
   display: inline-block;
   width: 200px;
+  background-color: white; /* NOVO: Fundo branco para o card */
+  color: #333;             /* NOVO: Garantir texto escuro no card */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* NOVO: Sombra leve */
+}
+
+.menu {
+  background-color: #eee;
+  padding: 10px;
+  text-align: center;
+}
+
+.menu a {
+  color: #333;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+.menu a:hover {
+  color: #007bff;
+}
+
+/* --- NOVOS Estilos Específicos Aula 22 --- */
+
+/* Para este estilo funcionar, no seu componente `OlaAluno.jsx`, 
+  mude a <div> principal para <div className="ola-aluno"> 
+*/
+.ola-aluno {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px auto;
+    width: 300px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.ola-aluno h2 {
+    color: var(--bg); /* Roxo */
+    margin: 0;
+    border-bottom: none; /* Remove a borda do h2 global */
+    padding-bottom: 5px;
+}
+
+.ola-aluno p {
+    color: #777;
+    font-size: 0.9em;
+    margin: 5px 0 0 0;
+}
+
+/* Para este estilo funcionar, no seu `Aula22.jsx`,
+  adicione a classe "conteudo-principal" à div
+*/
+.conteudo-principal {
+    padding: 20px;
+    text-align: center;
+    background-color: #f0f0f0;
+    color: #333 !important; /* IMPORTANTE: Garante o texto escuro */
 }

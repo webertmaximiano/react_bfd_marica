@@ -1,24 +1,27 @@
-import './App.css'
-import Header from './components/Header';
-import Card from './components/Card';
-import Footer from './components/Footer';
-import Menu from './components/Menu';
+// src/App.jsx
+
+// Importamos os estilos globais
+import './App.css'; 
+
+// Importamos nossos novos componentes de "Aula"
+import Aula21 from './components/Aula21';
+import Aula22 from './components/Aula22';
+
 
 function App() {
-
   return (
     <>
-      <Header />
-        <main className="main">
-          <Menu />
-          <Card />
-          <Card />
-          <Card />
-
-        </main>
-      <Footer />
+      <h1>Meu Curso de React - Exercícios</h1>
+      
+      {/* Exibindo a Aula 21 */}
+      <Aula21 />
+      
+      <hr /> {/* Uma linha para separar as aulas */}
+      
+      {/* Exibindo a Aula 22 */}
+      <Aula22 />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

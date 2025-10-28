@@ -2,6 +2,8 @@
 
 // --- Exercício 1 (o que já tínhamos) ---
 import OlaAluno from './OlaAluno'; 
+import Saudacao from './Saudacao';
+import SaudacaoLonga from './SaudacaoLonga';
 
 // --- NOVO: Importações para o Exercício 2 ---
 import Cabecalho from './Cabecalho'; 
@@ -21,6 +23,19 @@ function Aula22() {
       <OlaAluno nome="Maria" />
       <OlaAluno nome="João" />
       <OlaAluno nome="Ana" />
+      
+      {/* --- Demonstração: forma longa vs desestruturação --- */}
+      <h4>Comparação: sem desestruturação (forma longa) x com desestruturação (forma limpa)</h4>
+      <div style={{ display: 'flex', gap: '20px', alignItems: 'flex-start', marginBottom: '16px' }}>
+        <div style={{ flex: 1 }}>
+          <strong>Forma longa</strong>
+          <SaudacaoLonga nome="Carlos" idade={35} />
+        </div>
+        <div style={{ flex: 1 }}>
+          <strong>Forma com desestruturação</strong>
+          <Saudacao nome="Carlos" idade={35} />
+        </div>
+      </div>
       {/* --- Fim do Exercício 1 --- */}
 
       <hr /> {/* Uma linha para separar os exercícios */}
@@ -32,7 +47,7 @@ function Aula22() {
       <Cabecalho />
       
       {/* 2. Adicionou a div com o texto */}
-      <div style={{ padding: '20px', textAlign: 'center', backgroundColor: '#f0f0g4' }}>
+      <div style={{ padding: '20px', textAlign: 'center', backgroundColor: '#f0f0f4' }}>
         <p>Bem Vindo a Aula 22</p>
         <OlaAluno nome="João" />
       </div>

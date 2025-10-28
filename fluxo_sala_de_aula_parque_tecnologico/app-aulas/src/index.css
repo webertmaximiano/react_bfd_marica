@@ -1,5 +1,10 @@
 /* src/index.css */
 
+/* Tailwind directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --bg: #6f1f7a;
   --text: #e5e7eb;

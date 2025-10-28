@@ -1,9 +1,9 @@
 // src/components/Cabecalho.jsx
 
 function Cabecalho() {
-  // Adicionei um estilo simples só para ele ser diferente do Header anterior
+  // estilo aplicado via CSS (.cabecalho)
   return (
-    <header style={{ backgroundColor: 'lightblue', padding: '10px', textAlign: 'center' }}>
+    <header className="cabecalho">
       <h1>Exercício 2: Cabeçalho</h1>
     </header>
   );

@@ -1,23 +1,16 @@
 import React from 'react';
 
 // Componente Botao: reutilizável e personalizável via props
-function Botao({ texto = 'Botão', cor_fundo = '#007bff', cor_texto = '#ffffff', onClick, aoClicar }) {
+function Botao({ texto = 'Botão', cor_fundo, cor_texto, onClick, aoClicar, className = '' }) {
   // aceita tanto `onClick` quanto `aoClicar` (nome usado no material)
   const handler = aoClicar || onClick;
+  const classes = `botao ${className}`.trim();
+  const style = {};
+  if (cor_fundo) style.backgroundColor = cor_fundo;
+  if (cor_texto) style.color = cor_texto;
+
   return (
-    <button
-      onClick={handler}
-      style={{
-        backgroundColor: cor_fundo,
-        color: cor_texto,
-        border: 'none',
-        padding: '8px 14px',
-        borderRadius: '6px',
-        cursor: 'pointer',
-        fontWeight: 600,
-        marginRight: '8px'
-      }}
-    >
+    <button onClick={handler} className={classes} style={style}>
       {texto}
     </button>
   );

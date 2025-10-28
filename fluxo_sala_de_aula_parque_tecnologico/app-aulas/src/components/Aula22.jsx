@@ -18,6 +18,11 @@ import Aluno from './Aluno';
 // --- FIM DO NOVO ---
 
 function Aula22() {
+  // Exemplo de função para demonstrar passagem de comportamento via props
+  const salvar = () => {
+    alert('Dados salvos com sucesso!');
+  };
+
   return (
     <section className="aula-container">
       <h2>Exercícios da Aula 22</h2>
@@ -74,9 +79,9 @@ function Aula22() {
         <div className="example-box">
           <div className="example-title">Botões</div>
           <div style={{ marginTop: 8 }}>
-            <Botao texto="Salvar" cor_fundo="#28a745" cor_texto="#ffffff" />
-            <Botao texto="Cancelar" cor_fundo="#dc3545" cor_texto="#ffffff" />
-            <Botao texto="Ajuda" cor_fundo="#6c757d" cor_texto="#ffffff" />
+            <Botao texto="Salvar" className="btn-green" />
+            <Botao texto="Cancelar" className="btn-red" />
+            <Botao texto="Ajuda" className="btn-gray" />
           </div>
         </div>
       </div>
@@ -89,7 +94,7 @@ function Aula22() {
             {/* Definimos a função salvar dentro do componente para demonstração */}
             {/* Ao clicar, será executado o alert */}
             {/**/}
-            <Botao texto="Salvar (aoClicar)" cor_fundo="#28a745" cor_texto="#fff" aoClicar={() => alert('Dados salvos com sucesso!')} />
+            <Botao texto="Salvar (aoClicar)" className="btn-green" aoClicar={salvar} />
           </div>
         </div>
       </div>

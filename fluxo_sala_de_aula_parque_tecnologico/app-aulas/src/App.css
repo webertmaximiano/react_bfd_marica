@@ -173,3 +173,71 @@ h1 {
   color: #8b0d0d; /* vermelho */
   font-weight: 600;
 }
+
+/* Geral - paleta e melhorias */
+:root {
+  --primary: #2a9d8f; /* verde */
+  --accent: #264653;  /* azul escuro */
+  --danger: #e63946;  /* vermelho */
+  --muted: #6c757d;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background: linear-gradient(180deg, #fafafa 0%, #f6f7fb 100%);
+}
+
+/* Header e footer mais limpos */
+.cabecalho {
+  background: linear-gradient(90deg, rgba(42,157,143,0.12), rgba(38,70,83,0.06));
+  border-left: 6px solid var(--primary);
+  padding: 14px 18px;
+  border-radius: 6px;
+  margin-bottom: 18px;
+  text-align: center;
+}
+.cabecalho h1 { margin: 0; color: var(--accent); font-size: 1.25rem; }
+
+.rodape {
+  background: transparent;
+  border-top: 1px solid #e6eef0;
+  padding: 12px 0;
+  margin-top: 18px;
+  color: #55606a;
+  text-align: center;
+}
+
+/* Botões: classe base, com hover e foco */
+.botao {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-right: 8px;
+  box-shadow: 0 3px 8px rgba(16,24,40,0.06);
+  transition: transform 120ms ease, box-shadow 120ms ease, filter 120ms ease;
+  border: none;
+}
+.botao:focus { outline: 2px solid rgba(42,157,143,0.18); outline-offset: 2px; }
+.botao:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(16,24,40,0.12); }
+
+/* Títulos dos exemplos mais discretos */
+.example-title { color: var(--accent); }
+
+/* Caixa do container principal ajustada visualmente */
+.aula-container { max-width: 1100px; }
+
+/* Botões temáticos (substituem cores inline) */
+.btn-green { background-color: var(--primary); color: #ffffff; }
+.btn-red { background-color: var(--danger); color: #ffffff; }
+.btn-gray { background-color: #6c757d; color: #ffffff; }
+.btn-blue { background-color: #264653; color: #ffffff; }
+
+.btn-green:hover { filter: brightness(0.95); }
+.btn-red:hover { filter: brightness(0.95); }
+.btn-gray:hover { filter: brightness(0.95); }
+.btn-blue:hover { filter: brightness(0.95); }
+
+/* pequenas variações visuais para destaque */
+.example-box p { margin: 8px 0; }

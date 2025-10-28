@@ -1,9 +1,8 @@
 // src/components/Rodape.jsx
 
 function Rodape() {
-  // Estilo simples para diferenciar
   return (
-    <footer style={{ backgroundColor: 'lightgray', padding: '10px', textAlign: 'center' }}>
+    <footer className="rodape">
       <p>Exercício 2: Rodapé</p>
     </footer>
   );

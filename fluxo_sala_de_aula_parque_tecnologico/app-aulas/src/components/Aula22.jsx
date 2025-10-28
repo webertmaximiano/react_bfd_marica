@@ -9,7 +9,11 @@ import SaudacaoLonga from './SaudacaoLonga';
 import Cabecalho from './Cabecalho'; 
 import Rodape from './Rodape';
 import CardProduto from './CardProduto';
+import Mensagem from './Mensagem';
 import AppAula22 from '../AppAula22';
+import Nota from './Nota';
+import Botao from './Botao';
+import Aluno from './Aluno';
 
 // --- FIM DO NOVO ---
 
@@ -24,21 +28,71 @@ function Aula22() {
       <OlaAluno nome="João" />
       <OlaAluno nome="Ana" />
       
-      {/* --- Demonstração: forma longa vs desestruturação --- */}
+  {/* --- Demonstração: forma longa vs desestruturação --- */}
       <h4>Comparação: sem desestruturação (forma longa) x com desestruturação (forma limpa)</h4>
-      <div style={{ display: 'flex', gap: '20px', alignItems: 'flex-start', marginBottom: '16px' }}>
-        <div style={{ flex: 1 }}>
-          <strong>Forma longa</strong>
+      <div className="example-row">
+        <div className="example-box">
+          <div className="example-title">Forma longa</div>
           <SaudacaoLonga nome="Carlos" idade={35} />
         </div>
-        <div style={{ flex: 1 }}>
-          <strong>Forma com desestruturação</strong>
+        <div className="example-box">
+          <div className="example-title">Forma com desestruturação</div>
           <Saudacao nome="Carlos" idade={35} />
         </div>
       </div>
       {/* --- Fim do Exercício 1 --- */}
 
+  {/* --- Exemplo extra: expressões JS dentro de {} (conforme slide) --- */}
+  <h4>Props com expressões JavaScript</h4>
+  <p>Tudo dentro de {'{}'} é avaliado como JavaScript — você pode chamar métodos como <code>toUpperCase()</code>:</p>
+  <div className="mensagem-box" style={{ marginBottom: 12 }}>
+    <Mensagem nome="hygor" />
+  </div>
+
+      <hr />
+
+      {/* --- Exemplo: Props com cálculos e condições (operador ternário) --- */}
+      <h4>Props com cálculos e condições</h4>
+      <p>Podemos até passar expressões matemáticas ou condições (ex.: operador ternário):</p>
+      <div className="example-row">
+        <div className="example-box">
+          <div className="example-title">Exemplo 1</div>
+          <Nota aluno="Marcio" valor={10} />
+        </div>
+        <div className="example-box">
+          <div className="example-title">Exemplo 2</div>
+          <Nota aluno="Juliana" valor={6} />
+        </div>
+      </div>
+
       <hr /> {/* Uma linha para separar os exercícios */}
+
+      {/* --- Componentes reutilizáveis (exemplo Botao) --- */}
+      <h3>Componentes Reutilizáveis e Personalizáveis com Props</h3>
+      <p>Exemplo: criando um botão genérico:</p>
+      <div className="example-row" style={{ marginBottom: 10 }}>
+        <div className="example-box">
+          <div className="example-title">Botões</div>
+          <div style={{ marginTop: 8 }}>
+            <Botao texto="Salvar" cor_fundo="#28a745" cor_texto="#ffffff" />
+            <Botao texto="Cancelar" cor_fundo="#dc3545" cor_texto="#ffffff" />
+            <Botao texto="Ajuda" cor_fundo="#6c757d" cor_texto="#ffffff" />
+          </div>
+        </div>
+      </div>
+
+      {/* Exemplo: adicionando comportamento (funções como props) */}
+      <div className="example-row">
+        <div className="example-box">
+          <div className="example-title">Botão com comportamento</div>
+          <div style={{ marginTop: 8 }}>
+            {/* Definimos a função salvar dentro do componente para demonstração */}
+            {/* Ao clicar, será executado o alert */}
+            {/**/}
+            <Botao texto="Salvar (aoClicar)" cor_fundo="#28a745" cor_texto="#fff" aoClicar={() => alert('Dados salvos com sucesso!')} />
+          </div>
+        </div>
+      </div>
 
       {/* --- NOVO (Exercício 2) --- */}
       <h3>Exercício 2: Novos Componentes</h3>
@@ -62,6 +116,21 @@ function Aula22() {
       <CardProduto nome="Produto 1" preco="R$ 10,00" />
       <CardProduto nome="Produto 2" preco="R$ 20,00" />
       <CardProduto nome="Produto 3" preco="R$ 30,00" />
+
+      {/* --- Exercício 3 (Gabarito): componente Aluno --- */}
+      <h4>Exercício 3 - Gabarito (Aluno)</h4>
+      <p>Exemplo de uso do componente <code>Aluno</code> com diferentes props:</p>
+      <div className="example-row">
+        <div className="example-box">
+          <Aluno nome="Webert" curso="React" nota={10} />
+        </div>
+        <div className="example-box">
+          <Aluno nome="Ana" curso="JavaScript" nota={10} />
+        </div>
+        <div className="example-box">
+          <Aluno nome="João" curso="CSS" nota={10} />
+        </div>
+      </div>
 
        <hr /> {/* Uma linha para separar as aulas */}
 

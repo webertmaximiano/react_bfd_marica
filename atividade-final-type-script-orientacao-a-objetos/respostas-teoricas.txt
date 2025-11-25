@@ -1,0 +1,33 @@
+Atividade Final – TypeScript e Orientação a Objetos
+
+PARTE 1 — Questões Teóricas
+
+1. Explique com suas próprias palavras o que significa Programação Orientada a Objetos (POO).
+Resposta: Programação Orientada a Objetos (POO) é um paradigma de programação que organiza o código em torno de "objetos", que são instâncias de classes. Esses objetos representam entidades do mundo real, com propriedades (atributos) e comportamentos (métodos), permitindo modelar sistemas de forma mais intuitiva e modular.
+
+2. Quais são as vantagens de usar TypeScript em vez de JavaScript? Cite pelo menos duas.
+Resposta: TypeScript oferece tipagem estática, que ajuda a detectar erros em tempo de compilação, reduzindo bugs em produção. Além disso, fornece melhor suporte a IDEs com autocompletar e refatoração, melhorando a produtividade do desenvolvedor.
+
+3. Defina o que são: classe, objeto, atributo e método.
+Resposta: Classe é um modelo ou blueprint para criar objetos, definindo sua estrutura. Objeto é uma instância concreta de uma classe. Atributo é uma propriedade ou variável que armazena dados dentro de uma classe/objeto. Método é uma função definida dentro de uma classe que descreve o comportamento do objeto.
+
+4. Para que serve o modificador de acesso private? Por que ele é importante para encapsulamento?
+Resposta: O modificador private restringe o acesso a atributos ou métodos apenas dentro da própria classe, impedindo acesso externo direto. É importante para encapsulamento porque protege o estado interno do objeto, permitindo controle sobre como os dados são modificados e mantendo a integridade do objeto.
+
+5. O que é uma classe abstrata e em que situação ela deve ser usada?
+Resposta: Uma classe abstrata é uma classe que não pode ser instanciada diretamente e serve como base para outras classes. Deve ser usada quando queremos definir um contrato comum (métodos abstratos) que subclasses devem implementar, promovendo reutilização e polimorfismo.
+
+6. O que é uma interface em TypeScript e qual a sua utilidade?
+Resposta: Uma interface em TypeScript define um contrato para a estrutura de um objeto, especificando propriedades e métodos que uma classe deve implementar. Sua utilidade é garantir consistência em objetos de diferentes classes, facilitando polimorfismo e verificação de tipos em tempo de compilação.
+
+7. Explique a diferença entre herança e composição.
+Resposta: Herança é quando uma classe (subclasse) herda propriedades e métodos de outra classe (superclasse), criando uma relação "é um". Composição é quando uma classe contém instâncias de outras classes como atributos, criando uma relação "tem um", sendo mais flexível e evitando problemas de herança múltipla.
+
+8. O que é polimorfismo? Dê um exemplo simples em palavras.
+Resposta: Polimorfismo é a capacidade de objetos de diferentes classes responderem ao mesmo método de maneiras diferentes. Exemplo: Um método "fazerSom" em classes Animal pode ser implementado como "latir" em Cachorro e "miar" em Gato, permitindo tratar ambos como Animal.
+
+9. O que são exceções? Como o TypeScript trata erros usando try/catch?
+Resposta: Exceções são erros que ocorrem durante a execução do programa, interrompendo o fluxo normal. TypeScript trata erros com try/catch: o código que pode falhar fica em try, e se uma exceção ocorrer, é capturada em catch para tratamento, permitindo recuperação ou logging sem quebrar o programa.
+
+10. Por que testes unitários são importantes no desenvolvimento orientado a objetos? Cite no mínimo 1 motivo.
+Resposta: Testes unitários são importantes porque verificam o comportamento individual de métodos e classes, garantindo que mudanças no código não quebrem funcionalidades existentes. Isso aumenta a confiabilidade e facilita refatorações em sistemas orientados a objetos complexos.

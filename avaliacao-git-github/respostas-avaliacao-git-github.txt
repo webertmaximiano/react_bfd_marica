@@ -1,0 +1,76 @@
+Avaliação Final — Git, GitHub e GitLab
+
+Nome do Aluno: Webert Maximiano
+
+Data: 25 de novembro de 2025
+
+Turma: REACT BFD MARICA RJ
+
+
+Parte 1: Conceitos Teóricos
+
+1. O que é Git e qual sua principal função? 
+Resposta: Git é um sistema de controle de versão distribuído que permite rastrear mudanças no código-fonte ao longo do tempo. Sua principal função é gerenciar versões de arquivos, facilitando colaboração e evitando perda de trabalho.
+
+2. Explique a diferença entre Git e GitHub. 
+Resposta: Git é a ferramenta de linha de comando para controle de versão local, enquanto GitHub é uma plataforma online que hospeda repositórios Git, permitindo colaboração remota, interface gráfica e recursos como issues e pull requests.
+
+3. O que são branches no Git? Por que são importantes? 
+Resposta: Branches são ramificações independentes do código principal. Elas são importantes porque permitem desenvolver features isoladamente sem afetar o código principal, facilitando testes e merges seguros.
+
+4. Descreva o que é um repositório remoto e como ele difere de um repositório local. 
+Resposta: Um repositório remoto é uma versão do projeto hospedada em um servidor (como GitHub), acessível por múltiplos usuários. Difere do local porque o local está na máquina do usuário e o remoto permite sincronização e colaboração.
+
+5. O que é um merge no Git? Quando ele é usado? 
+Resposta: Merge é o processo de combinar mudanças de uma branch para outra. É usado para integrar features desenvolvidas em branches separadas de volta à branch principal, após testes e revisões.
+
+6. Explique o conceito de "pull request" no GitHub. Qual sua importância em projetos colaborativos? 
+Resposta: Pull request é uma solicitação para mesclar mudanças de uma branch para outra, permitindo revisão de código. É importante em projetos colaborativos porque facilita discussões, revisões e aprovações antes da integração.
+
+7. Qual a diferença entre GitHub e GitLab? Cite pelo menos duas diferenças. 
+Resposta: GitHub é focado em projetos open-source e tem integração com Microsoft, enquanto GitLab oferece mais recursos de CI/CD integrados e pode ser self-hosted. Outra diferença é que GitLab inclui ferramentas de DevOps mais robustas por padrão.
+
+8. O que é um conflito de merge e como ele pode ser resolvido? 
+Resposta: Conflito de merge ocorre quando mudanças incompatíveis são feitas nas mesmas linhas de código em branches diferentes. Pode ser resolvido editando manualmente os arquivos conflitantes, escolhendo qual versão manter, e depois commitando a resolução.
+
+Parte 2: Comandos Git 
+
+9. Qual comando é usado para inicializar um novo repositório Git em uma pasta? 
+Comando: git init
+
+10. Escreva o comando para adicionar todos os arquivos modificados ao stage (área de preparação). 
+Comando: git add .
+
+11. Qual comando cria um commit com a mensagem "Primeiro commit"? 
+Comando: git commit -m "Primeiro commit"
+
+12. Escreva o comando para verificar o status dos arquivos no repositório. 
+Comando: git status
+
+13. Qual comando lista todas as branches locais? (4 pontos)
+Comando: git branch
+
+14. Escreva o comando para criar uma nova branch chamada "feature-nova". 
+Comando: git branch feature-nova
+
+15. Qual comando muda para a branch "main"? (4 pontos)
+Comando: git checkout main
+
+16. Escreva o comando para fazer push de uma branch local para o repositório remoto. 
+Comando: git push origin nome-da-branch
+
+17. Qual comando baixa as mudanças do repositório remoto e mescla com a branch atual? (4 pontos)
+Comando: git pull
+
+18. Escreva o comando para clonar um repositório remoto (substitua <URL> pela URL do repositório). (4 pontos)
+Comando: git clone <URL>
+
+---
+
+Parte 3: Cenários Práticos (20 pontos)
+
+19. Você está trabalhando em um projeto e fez várias mudanças. Descreva os passos para salvar essas mudanças no repositório local usando Git. (10 pontos)
+Resposta: 1. Verificar status: git status. 2. Adicionar mudanças: git add . 3. Criar commit: git commit -m "Descrição das mudanças". Isso salva as alterações no histórico local.
+
+20. Em um projeto colaborativo no GitHub, você criou uma nova feature em uma branch. Descreva o processo para integrar essa feature na branch principal usando pull request. (10 pontos)
+Resposta: 1. Push da branch: git push origin feature-branch. 2. Criar PR no GitHub. 3. Revisar código, discutir mudanças. 4. Após aprovação, fazer merge no GitHub ou localmente com git merge. 5. Deletar branch se necessário.

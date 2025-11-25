@@ -1,0 +1,22 @@
+// Exercício 8 — SASS: Mixins
+
+// Define um mixin botaoPadrao com estilos comuns para botões.
+@mixin botaoPadrao {
+  padding: 10px 20px; // Espaçamento interno.
+  background-color: #3498db; // Cor de fundo azul.
+  border: none; // Remove borda padrão.
+  border-radius: 5px; // Bordas arredondadas.
+  color: white; // Texto branco.
+  cursor: pointer; // Cursor de ponteiro.
+}
+
+// Seletor .btn-confirmar que inclui o mixin botaoPadrao.
+.btn-confirmar {
+  @include botaoPadrao; // Aplica os estilos do mixin.
+}
+
+// Seletor .btn-cancelar que inclui o mixin, mas modifica a cor de fundo.
+.btn-cancelar {
+  @include botaoPadrao; // Aplica os estilos base.
+  background-color: #e74c3c; // Modifica a cor para vermelho.
+}

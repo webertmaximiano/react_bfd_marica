@@ -1,0 +1,28 @@
+/* Estilos para o Exercício 4 - Box Model na Prática */
+
+/* Estilização da div para demonstrar o Box Model.
+   O Box Model inclui: conteúdo (content), padding, border e margin. */
+div {
+    /* Largura e altura do conteúdo interno. */
+    width: 300px;
+    height: 100px;
+
+    /* Padding: Espaço interno entre o conteúdo e a borda. */
+    padding: 20px;
+
+    /* Border: Linha ao redor do padding. */
+    border: 5px solid #e74c3c;
+
+    /* Margin: Espaço externo ao redor da borda, separando de outros elementos. */
+    margin: 30px;
+
+    /* Cor de fundo para visualizar a área do conteúdo + padding. */
+    background-color: #f39c12;
+
+    /* Cor do texto para contraste. */
+    color: white;
+
+    /* Alinhamento do texto para melhor visualização. */
+    text-align: center;
+    line-height: 1.4;
+}

@@ -1,0 +1,21 @@
+/* CSS compilado do exercicio8.scss */
+
+/* Estilos para .btn-confirmar */
+.btn-confirmar {
+  padding: 10px 20px;
+  background-color: #3498db;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Estilos para .btn-cancelar */
+.btn-cancelar {
+  padding: 10px 20px;
+  background-color: #e74c3c;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}

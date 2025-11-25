@@ -1,0 +1,23 @@
+// Exercício 7 — SASS: variáveis e aninhamento
+
+// Define uma variável para a cor principal, facilitando reutilização e manutenção.
+$corPrincipal: #3498db;
+
+// Seletor .card com estilos usando a variável.
+.card {
+  background-color: $corPrincipal; // Usa a variável para o fundo.
+  color: white; // Texto branco para contraste.
+  padding: 20px; // Espaçamento interno.
+  border-radius: 8px; // Bordas arredondadas para visual atrativo.
+
+  // Aninhamento: Estiliza elementos dentro de .card sem repetir o seletor.
+  h3 {
+    margin: 0 0 10px 0; // Margem inferior para separar do parágrafo.
+    font-size: 1.5em; // Tamanho maior para o título.
+  }
+
+  p {
+    margin: 0; // Remove margens padrão.
+    line-height: 1.4; // Espaçamento entre linhas para melhor leitura.
+  }
+}

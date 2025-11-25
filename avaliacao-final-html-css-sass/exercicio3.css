@@ -1,0 +1,30 @@
+/* Estilos para o Exercício 3 - Estilização Externa */
+
+/* Estilização do título h2: Cor personalizada para destacar o título. */
+h2 {
+    color: #2c3e50; /* Cor azul escuro para o texto. */
+}
+
+/* Estilização do parágrafo: Fonte maior e espaçamento para melhor legibilidade. */
+p {
+    font-size: 18px; /* Aumenta o tamanho da fonte. */
+    line-height: 1.6; /* Adiciona espaçamento entre linhas para melhor leitura. */
+    margin: 20px 0; /* Margem vertical para separar do título e botão. */
+}
+
+/* Estilização do botão: Fundo colorido e bordas arredondadas. */
+button {
+    background-color: #3498db; /* Fundo azul para o botão. */
+    color: white; /* Texto branco para contraste. */
+    border: none; /* Remove borda padrão. */
+    border-radius: 5px; /* Bordas arredondadas. */
+    padding: 10px 20px; /* Espaçamento interno para tamanho adequado. */
+    font-size: 16px; /* Tamanho da fonte. */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse. */
+    transition: background-color 0.3s; /* Transição suave para o efeito hover. */
+}
+
+/* Efeito hover no botão: Muda a cor de fundo ao passar o mouse. */
+button:hover {
+    background-color: #2980b9; /* Cor mais escura no hover para feedback visual. */
+}

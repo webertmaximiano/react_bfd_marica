@@ -1,0 +1,35 @@
+/* Estilos para o Exercício 5 - Layout com Flexbox */
+
+/* Reset básico para remover margens padrão. */
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Container principal: Usa Flexbox para layout. */
+.container {
+    display: flex; /* Ativa o Flexbox no container. */
+    justify-content: center; /* Centraliza os itens horizontalmente. */
+    gap: 20px; /* Espaçamento entre os cards. */
+    flex-wrap: wrap; /* Permite que os cards quebrem linha em telas menores. */
+}
+
+/* Estilização dos cards. */
+.card {
+    width: 200px; /* Largura fixa para cada card. */
+    padding: 20px; /* Espaçamento interno. */
+    background-color: #3498db; /* Fundo azul. */
+    color: white; /* Texto branco. */
+    border-radius: 8px; /* Bordas arredondadas. */
+    text-align: center; /* Centraliza o texto. */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para profundidade. */
+}
+
+/* Responsividade: Em telas menores, os cards ficam empilhados. */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Muda para coluna em telas pequenas. */
+        align-items: center; /* Centraliza verticalmente. */
+    }
+}

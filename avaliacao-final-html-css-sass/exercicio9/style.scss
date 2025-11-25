@@ -1,0 +1,196 @@
+// Exercício 9 — Mini Landing Page Responsiva com SASS (Inspirado em Agilizando o Futuro)
+
+// Variáveis para cores e espaçamentos.
+$corPrimaria: #3498db;
+$corSecundaria: #2c3e50;
+$corFundo: #f4f4f4;
+$corTexto: #333;
+$espacamento: 20px;
+
+// Reset básico.
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: $corTexto;
+  background-color: $corFundo;
+}
+
+// Cabeçalho.
+header {
+  background-color: $corPrimaria;
+  color: white;
+  padding: $espacamento;
+  text-align: center;
+
+  h1 {
+    margin-bottom: 10px;
+    font-size: 2.5em;
+  }
+
+  nav {
+    a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// Seções principais.
+main {
+  section {
+    padding: $espacamento * 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+
+    h2 {
+      margin-bottom: $espacamento;
+      color: $corPrimaria;
+      font-size: 2em;
+    }
+
+    p {
+      margin-bottom: $espacamento;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    img {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      margin-bottom: $espacamento;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .cta-button {
+      background-color: $corPrimaria;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 20px;
+      display: block; // Torna o botão um bloco para centralização
+      margin-left: auto;
+      margin-right: auto; // Centraliza horizontalmente
+      transition: background-color 0.3s, transform 0.2s;
+
+      &:hover {
+        background-color: darken($corPrimaria, 10%);
+        transform: scale(1.05);
+      }
+    }
+
+    // Lista na seção Sobre.
+    ul {
+      list-style-type: none;
+      padding: 0;
+      max-width: 600px;
+      margin: 0 auto;
+
+      li {
+        background-color: white;
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    // Formulário na seção Contato.
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      text-align: left;
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+
+      input, textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: $espacamento;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+
+      button {
+        width: 100%;
+      }
+    }
+
+    a {
+      color: $corPrimaria;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// Rodapé.
+footer {
+  background-color: $corSecundaria;
+  color: white;
+  text-align: center;
+  padding: $espacamento;
+}
+
+// Media queries para responsividade.
+@media (max-width: 768px) {
+  header {
+    h1 {
+      font-size: 2em;
+    }
+
+    nav {
+      a {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+  }
+
+  main {
+    section {
+      padding: $espacamento;
+
+      h2 {
+        font-size: 1.5em;
+      }
+
+      img {
+        max-width: 100%;
+      }
+
+      form {
+        input, textarea {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

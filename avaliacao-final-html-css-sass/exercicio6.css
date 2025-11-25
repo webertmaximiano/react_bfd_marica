@@ -1,0 +1,28 @@
+/* Estilos para o Exercício 6 - Responsividade com Media Query */
+
+/* Estilos base para a página. */
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: white; /* Fundo padrão branco. */
+    color: black;
+    transition: background-color 0.3s; /* Transição suave para mudança de fundo. */
+}
+
+h1, p {
+    margin-bottom: 20px;
+}
+
+/* Media query para telas menores que 600px: Muda o fundo para cinza. */
+@media (max-width: 600px) {
+    body {
+        background-color: #f0f0f0; /* Fundo cinza claro para telas pequenas. */
+    }
+}
+
+/* Media query para telas maiores que 1000px: Centraliza o texto. */
+@media (min-width: 1000px) {
+    body {
+        text-align: center; /* Alinha o texto ao centro. */
+    }
+}

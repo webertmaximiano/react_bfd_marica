@@ -1,0 +1,48 @@
+Atividade Final – TypeScript e Orientação a Objetos
+
+PARTE 1 — Questões Teóricas
+
+1. O que é Programação Orientada a Objetos (POO)? Explique em suas palavras.
+Resposta: Programação Orientada a Objetos (POO) é um paradigma de programação que organiza o software em torno de objetos — estruturas que combinam dados e comportamento. Cada objeto é instância de uma classe que define seus atributos (estado) e métodos (comportamento). O objetivo da POO é representar conceitos do mundo real de forma modular, facilitando a modelagem, manutenção e reutilização do código.
+
+2. Cite duas vantagens do TypeScript em relação ao JavaScript.
+Resposta:
+- Tipagem estática: permite detectar muitos erros em tempo de compilação (antes de rodar), reduzindo bugs em produção.
+- Melhor suporte a IDEs: autocompletar, navegação (go to definition) e refatoração funcionam melhor com tipos explícitos, aumentando produtividade.
+
+3. O que são classes e objetos em POO? Explique a relação entre eles.
+Resposta: Uma classe é uma definição (blueprint) que descreve a estrutura e o comportamento de entidades: seus atributos e métodos. Um objeto é uma instância concreta dessa classe — ou seja, um valor em memória que possui os atributos definidos pela classe e pode executar seus métodos. Várias instâncias (objetos) podem ser criadas a partir da mesma classe.
+
+4. O que são atributos e métodos? Dê um exemplo simples.
+Resposta: Atributos são variáveis que descrevem o estado de um objeto (por exemplo: `nome`, `idade`). Métodos são funções definidas na classe que descrevem comportamentos (por exemplo: `apresentar()` retorna uma string com o nome e a idade). Exemplo: classe `Pessoa` com atributo `nome: string` e método `apresentar(): string`.
+
+5. Explique o papel da palavra-chave constructor no TypeScript.
+Resposta: `constructor` é um método especial da classe que é executado quando uma nova instância (objeto) é criada. Ele serve para inicializar atributos e executar qualquer lógica necessária ao criar o objeto (validações iniciais, atribuição de valores padrão, etc.).
+
+6. O que são public e private e como eles interferem no encapsulamento?
+Resposta: `public` e `private` são modificadores de acesso que controlam a visibilidade de atributos e métodos. `public` (padrão) permite acesso de qualquer lugar; `private` restringe o acesso apenas ao interior da própria classe. O encapsulamento é a prática de esconder detalhes internos (usar `private`) e expor uma interface pública controlada (métodos `public`), garantindo que o estado interno não seja alterado de forma indevida.
+
+7. O que é abstração e quando devemos usar uma classe abstrata?
+Resposta: Abstração é o processo de simplificar um sistema focando apenas nos aspectos relevantes e ignorando detalhes desnecessários. Uma classe abstrata define um contrato parcial e pode incluir métodos abstratos (sem implementação) que obrigam subclasses a implementar comportamento específico. Usamos classes abstratas quando queremos fornecer um esqueleto comum para várias implementações concretas, mas impedir instanciação direta da classe base.
+
+8. Qual a função de uma interface em TypeScript?
+Resposta: Uma interface define um contrato de tipos (estrutura) que objetos ou classes devem seguir — especificando propriedades e assinaturas de métodos. Em TypeScript, interfaces são usadas para garantir consistência entre implementações, permitir tipagem estática em funções e facilitar a interoperabilidade entre diferentes partes do código.
+
+9. Explique a diferença entre composição e agregação.
+Resposta: Ambos descrevem relacionamentos entre objetos.
+- Composição: relação forte "tem um" onde o tempo de vida do componente depende do objeto pai (se o pai for destruído, o componente também é). Ex.: `Pedido` contém `Item`s que existem apenas dentro do pedido.
+- Agregação: relação mais fraca onde o objeto pai referencia objetos independentes que podem existir separadamente. Ex.: `Curso` agrega `Aluno`s; os alunos existem independentemente do curso.
+
+10. O que é herança e como ela promove reuso de código?
+Resposta: Herança permite que uma classe (subclasse) herde atributos e métodos de outra (superclasse), adotando e estendendo seu comportamento. Isso promove reuso porque funcionalidades comuns são implementadas na superclasse e reaproveitadas pelas subclasses, evitando duplicação de código.
+
+11. Explique polimorfismo com um exemplo simples (pode ser só em palavras).
++Resposta: Polimorfismo é a capacidade de tratarmos objetos de diferentes classes através de uma interface comum e obter comportamentos distintos. Exemplo: função `emitirSom(animal: Animal)` chama `animal.emitirSom()`. Um `Cachorro` retorna "Au au" e um `Gato` retorna "Miau", apesar de ambos serem passados como `Animal`.
+
+12. O que é tratamento de exceções? Como o bloco try / catch funciona?
+Resposta: Tratamento de exceções é o mecanismo para capturar e lidar com erros em tempo de execução. Em `try { ... } catch (e) { ... }`, o código dentro de `try` é executado e, se lançar uma exceção (throw), a execução salta para o `catch`, onde podemos tratar, registrar ou recuperar do erro sem interromper abruptamente o programa.
+
+13. Por que testes unitários são importantes no desenvolvimento orientado a objetos?
+Resposta: Testes unitários validam o comportamento isolado de métodos e classes, garantindo que cada unidade funcione conforme esperado. Eles ajudam a detectar regressões ao modificar código, documentam comportamento esperado e facilitam refatorações seguras em sistemas orientados a objetos.
+
+Webert Maximiano

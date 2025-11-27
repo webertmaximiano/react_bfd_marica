@@ -1,0 +1,38 @@
+Atividade Final – React JS
+
+PARTE 1 — Questões Teóricas
+
+1. O que é React e por que ele é usado para criar interfaces de usuário?
+Resposta: React é uma biblioteca JavaScript para construir interfaces de usuário declarativas e reativas, desenvolvida pelo Facebook. Ele facilita a criação de UIs complexas quebrando a interface em componentes reutilizáveis, atualizando apenas as partes necessárias quando o estado muda, o que simplifica o desenvolvimento e a manutenção.
+
+2. O que é uma SPA (Single Page Application)? Explique com suas palavras.
+Resposta: SPA é uma aplicação web que carrega uma única página HTML e atualiza dinamicamente o conteúdo conforme o usuário navega, sem recarregar toda a página. Isso proporciona transições mais rápidas e uma experiência de uso semelhante a apps nativos.
+
+3. O que é o Virtual DOM e por que ele melhora o desempenho das aplicações?
+Resposta: O Virtual DOM é uma representação leve da DOM real mantida em memória. Quando o estado muda, o React cria uma nova árvore virtual, calcula as diferenças (diff) em relação à árvore anterior e aplica apenas as mudanças necessárias na DOM real. Isso reduz manipulações caras da DOM e melhora o desempenho.
+
+4. O que são componentes em React e qual a vantagem de usá-los?
+Resposta: Componentes são unidades reutilizáveis de UI (pode ser função ou classe) que encapsulam markup, lógica e estilo. Vantagens: promovem reutilização, isolam responsabilidade, facilitam testes e tornam o código mais organizado e mantenível.
+
+5. O que são props e como elas permitem a comunicação entre componentes?
+Resposta: `props` (propriedades) são dados passados de um componente pai para um componente filho como atributos. Elas permitem configurar o comportamento e a renderização de componentes filhos e suportam comunicação unidirecional (pai → filho).
+
+6. Para que serve o hook useState ? Explique seu funcionamento básico.
+Resposta: `useState` cria e gerencia estado local em componentes funcionais. Ele retorna um par: o valor atual do estado e uma função para atualizá-lo. Ao chamar a função de atualização, o componente re-renderiza com o novo estado.
+
+7. Explique o que é o hook useEffect e dê um exemplo de uso comum.
+Resposta: `useEffect` é um hook que executa efeitos colaterais em componentes funcionais (buscas de dados, subscrições, timers). Ele recebe uma função chamada após o render e uma lista de dependências; se as dependências mudarem, o efeito é reexecutado. Exemplo comum: buscar dados em `componentDidMount` simulando com `useEffect(() => { fetch(...) }, [])`.
+
+8. O que significa lifting state up? Dê um exemplo simples em palavras.
+Resposta: "Lifting state up" é mover o estado compartilhado para o componente pai mais próximo para que múltiplos componentes filhos possam ler/alterar o mesmo estado via props. Ex.: dois componentes de input precisam do mesmo valor; o estado é colocado no pai que passa o valor e o setter como props.
+
+9. O que caracteriza um componente controlado em React?
+Resposta: Um componente controlado é aquele cujo valor de entrada (por exemplo, `<input>`) é controlado pelo estado do React; o valor do input vem de uma prop (`value`) e atualizações são feitas via `onChange` que atualiza o estado. O componente não mantém o valor internamente no DOM.
+
+10. Cite duas formas de estilizar componentes React.
+Resposta: (1) CSS tradicional (arquivos .css importados) ou CSS Modules; (2) CSS-in-JS (styled-components, emotion) que permitem estilos encapsulados e dinâmicos.
+
+11. Por que é importante modularizar a estrutura de componentes em um projeto React?
+Resposta: Modularizar torna o código mais legível, reutilizável e testável; facilita manutenção e colaboração entre equipes. Componentes pequenos e bem definidos reduzem complexidade, permitem isolamento de bugs e tornam a arquitetura mais escalável.
+
+Webert Maximiano
